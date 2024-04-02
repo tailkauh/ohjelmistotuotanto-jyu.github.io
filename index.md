@@ -4,26 +4,17 @@ permalink: /
 ---
 
 Kurssilla käsitellään ohjelmistotuotantoprojektien hallinnan, työvaiheiden ja työvälineiden perusteita. Erityinen
-painotus ketterissä ohjelmistotuotantomenetelmissä.
+painotus ketterissä ohjelmistotuotantomenetelmissä. 
 
 Kurssin opetusjärjestelyt ja arvosteluperusteet on kuvattu [osassa 0](/osa0), lue ne tarkasti heti kurssin alussa!
 
-- Luennot
-  - ma 12-14 B123
-  - ti 12-14 B123
-  - Luennot ovat nähtävissä livenä [Unitubessa](https://video.helsinki.fi/unitube/live-stream.html?room=l10) 
-  - Luennoista tulee myös tallenteet, ks. [aikataulu](/#aikataulu), vuoden 2021 zoom-luentojen tallenteet ovat myös käytössä
-  - [Luentokalvot](https://github.com/ohjelmistotuotanto-hy/slides-23)
+- Luennot (toistaiseksi B121.1, etsitään kuitenkin opiskelijamäärällä sopivampi sali)
+  - ti 10-12 Agora B121.1 Beeta 
+  - pe 12-14 Agora B121.1 Beeta
 - [Miniprojekti](/miniprojekti)
-- Kurssikoe tiistaina 19.12. klo 07-14, ohjeita kokeeseen [täällä](/ohje_kokeeseen)
-  - Koeaikaa on aloitushetkestä 4 tuntia
-  - Huomaa, että riippumatta siitä monelta kokeen aloitat, loppuu se klo 14.00, eli jos haluat käyttää 4h, tulee koe aloittaa viimeistään klo 10.
-- Apua tehtävien tekoon
-  - pajassa BK107 ma 10-12, ma 14-16, ke 10-12 ja pe 12-14 
-- Kurssiin liittyvää keskustelua [Discordissa](https://study.cs.helsinki.fi/discord/join/ohtu), tule mukaan!
-  - **HUOM:** kaikki epäasialliset, halventavat ja jotain ihmisryhmää syrjivät kommentit kanavalla ovat kiellettyjä ja tälläisten kommenttien esittäjät poistetaan kanavalta
-- Kurssipalaute
-  - Kurssilla on käytössä normaalin lopussa kerättävän palautteen lisäksi ns. jatkuva palaute: voit antaa milloin vain kurssihenkilökunnalle anonyymiä palautetta osoitteessa <https://norppa.helsinki.fi/targets/72482660/feedback>
+- Kurssikoe tiistaina 21.5. klo 10-12.
+- Kurssiin liittyvää keskustelua (Minne haluatte tämän?)
+- Jatkuva kurssipalaute: <https://forms.office.com/e/m6iaUBkdMc>
 
 ## Ajankohtaista
 
@@ -35,6 +26,6 @@ Kurssin opetusjärjestelyt ja arvosteluperusteet on kuvattu [osassa 0](/osa0), l
 
 ## Kurssimateriaalin tekijä ja lisenssi
 
-Kurssimateriaalin ovat tehneet <a href="https://github.com/mluukkai">Matti Luukkainen</a> ja <a href="https://github.com/Kaltsoon">Kalle Ilves</a>. Lukuisat <a href="https://github.com/ohjelmistotuotanto-hy/ohjelmistotuotanto-hy.github.io/graphs/contributors">henkilöt</a> ovat parantaneet materiaalin laatua kirjoitus- ja asiavirhekorjauksin. Voit <a href="/osa0#typoja-materiaalissa">osallistua</a> kurssimateriaalin parantamiseen myös itse.
+Kurssillä käytetään <a href="https://github.com/mluukkai">Matti Luukkaisen</a> ja <a href="https://github.com/Kaltsoon">Kalle Ilveksen</a> Helsinginb yliopistolle kehittämää avointa <a href="https://ohjelmistotuotanto-hy.github.io/">oppimateriaalia</a>, jota on hieman muokattu.
 
 Tämä materiaali on lisensoitu <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons BY-NC-SA 3.0 -lisenssillä</a>, joten voit käyttää ja levittää sitä vapaasti, kunhan alkuperäisten tekijöiden nimiä ei poisteta. Jos teet muutoksia materiaaliin ja haluat levittää muunneltua versiota, se täytyy lisensoida samalla lisenssillä. Materiaalien käyttö kaupalliseen tarkoitukseen on ilman erillistä lupaa kielletty.
