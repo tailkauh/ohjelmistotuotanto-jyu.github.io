@@ -19,9 +19,11 @@ github_username: ihantola
 repo_url: 'https://github.com/ohjelmistotuotanto-jyu/ohjelmistotuotanto-jyu.github.io'
 repo_branch: 'master'
 
+norppa: https://forms.office.com/e/m6iaUBkdMc
 
-python_exercise_repo_url: 'https://github.com/ohjelmistotuotanto-hy/tehtavat'
-java_exercise_repo_url: 'https://github.com/ohjelmistotuotanto-hy/syksy2021-java'
+
+python_exercise_repo_url: 'https://github.com/ohjelmistotuotanto-jyu/tehtavat'
+java_exercise_repo_url: 'https://github.com/ohjelmistotuotanto-jyu/syksy2021-java'
 
 
 # Build settings

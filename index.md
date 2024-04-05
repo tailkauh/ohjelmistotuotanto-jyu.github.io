@@ -12,8 +12,8 @@ Kurssin opetusjärjestelyt ja arvosteluperusteet on kuvattu [osassa 0](/osa0), l
   - ti 10-12 Agora B121.1 Beeta 
   - pe 12-14 Agora B121.1 Beeta
 - [Miniprojekti](/miniprojekti)
-- Kurssikoe tiistaina 21.5. klo 10-12.
-- Kurssiin liittyvää keskustelua (Minne haluatte tämän?)
+- Kurssikoe tiistaina 21.5.
+- Kurssiin liittyvää keskustelua: <https://discord.gg/2zD6NzpDbX>
 - Jatkuva kurssipalaute: <https://forms.office.com/e/m6iaUBkdMc>
 
 ## Ajankohtaista

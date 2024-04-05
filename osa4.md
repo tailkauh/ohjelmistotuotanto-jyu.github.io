@@ -11,6 +11,8 @@ permalink: /osa4/
   />
 </a>
 
+{% include paivitys_kesken.md %}
+
 Olemme nyt käsitelleet ohjelmiston elinkaaren vaiheista vaatimusmäärittelyä ja laadunhallintaa. Tässä osassa aiheena on ohjelmiston suunnittelu ja toteutus.
 
 Osa sisältää paljon koodiesimerkkejä.
