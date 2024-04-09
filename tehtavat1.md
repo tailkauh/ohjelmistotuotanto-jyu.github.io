@@ -5,11 +5,10 @@ inheader: no
 permalink: /tehtavat1
 ---
 
-{% include miniproj_ilmo.md %}
 
 {% include laskari_info.md part=1 %}
 
-Tämän viikon tehtävissä harjoitellaan ensin muutaman tärkeän ohjelmistokehityksen työkalun (_komentorivi, versionhallinta, riippuvuuksien hallinta, automatisoitu testaus, jatkuva integraatio_) käyttöä.
+Tämän viikon tehtävissä harjoitellaan ensin muutaman tärkeän ohjelmistokehityksen työkalun (_komentorivi, versionhallinta, riippuvuuksien hallinta, automatisoitu testaus, jatkuva integraatio_) käyttöä. 
 
 Laskarien lopuksi harjoitellaan _riippuvuuksien injektointia_, joka on melko simppeli mutta erittäin käyttökelpoinen tekniikka, jonka avulla sovellusten testattavuutta on mahdollista parantaa.
 
@@ -21,7 +20,7 @@ Laskarien lopuksi harjoitellaan _riippuvuuksien injektointia_, joka on melko sim
 
 ### Tehtävien palauttaminen
 
-Tehtävät palautetaan GitHubiin, sekä merkitsemällä tehdyt tehtävät palautussovellukseen <{{site.stats_url}}> välilehdelle "my submission". Viikon tehtävät palautetaan yhdellä kertaa, eli tee merkintä palautussovellukseen vasta kun olet valmis viikon tehtävien osalta.
+Tehtävät palautetaan GitHubiin, sekä merkitsemällä tehdyt tehtävät Timiin: <{{site.stats_url}}>. Viikon tehtävät palautetaan yhdellä kertaa, eli tee merkintä palautussovellukseen vasta kun olet valmis viikon tehtävien osalta.
 
 Käytännössä tällä viikolla tehdään palautusta varten **kaksi erillistä** GitHub-repositoria:
 
@@ -50,8 +49,6 @@ Jos osaamisessasi on puutteita (ks. alla oleva lista) kertaa haluamastasi resurs
 
 - <https://www.codecademy.com/learn/learn-the-command-line> online-kurssin kaksi ensimmäistä osaa _Navigating the File System_ ja _Viewing and Changing the File System_
 - <https://ryanstutorials.net/linuxtutorial/> oppaasta 4 osaa: _1. The Command Line_, _2. Basic Navigation_, _3.More About Files_ ja _5. File Manipulation_
-
-Myös kurssin Tietokone työvälineenä [komentorivimateriaali](https://tkt-lapio.github.io/komentorivi/) käsittelee myös suurta osaa tehtävän komennoista.
 
 _HUOM. Codecademy vaatii kirjautumisen Facebook, Google tai GitHub -tunnuksella. Kurssilla käytetään muutenkin GitHubia, eli se tunnus pitäisi kaikilla olla olemassa, jotta pääsee kirjautumaan._
 
@@ -91,15 +88,11 @@ Luo GitHubiin repositorio nimellä _ohtuvarasto_
 
 ![]({{ "/images/lh1-1-22.png" | absolute_url }})
 
-**Jos et ole vielä luonut** koneellesi _ssh-avainta_, tee se nyt
-
-- Ohje avaimen luomiseen esim. [täällä](https://www.howtoforge.com/linux-basics-how-to-install-ssh-keys-on-the-shell). Riittää että teet stepit 1 ja 2 tai noudatat kurssin [Ohjelmistotekniikka](https://ohjelmistotekniikka-hy.github.io/python/viikko1#teht%C3%A4v%C3%A4-13-julkinen-avain)-materiaalin ohjeta
-
-Lisää julkinen avain GitHubiin:
+**Jos et ole vielä luonut** koneellesi _ssh-avainta_, tee se nyt. Lisää julkinen avain GitHubiin. Ohjeet avaimen luomiseen ja lisäämiseen löytyvät täältä::
 
 - <https://github.com/settings/ssh>
 
-Näin pystyt käyttämään GitHubia ilman salasanan syöttämistä koneelta, josta juuri luodun avaimen salainen pari löytyy
+Tämän jälkeen pystyt käyttämään GitHubia ilman salasanan syöttämistä koneelta, josta juuri luodun avaimen salainen pari löytyy
 
 Jos et ole jo aiemmin niin tehnyt, konfiguroi nimesi ja email-osoitteesi paikallisen koneesi Git:iin antamalla komennot:
 
@@ -108,7 +101,9 @@ git config --global user.name "Your Name"
 git config --global user.email my.address@gmail.com
 ```
 
-Oletuseditoriksi kannattaa Linuxilla ja macOS:lla konfiguroida _nano_:
+Tiedot näkyvät profiilissasi ja tekemiesi committien yhteydessä, joten anna sen verran tietoa, kuin haluat.
+
+Oletuseditoriksi kannattaa Linuxilla ja macOS:lla konfiguroida esimerkiksi _nano_ (jokaisella on mieltymyksensä):
 
 ```bash
 git config --global core.editor nano
@@ -144,8 +139,8 @@ Olet jo todennäköisesti käyttänyt Gitiä aiemmilla kursseilla. Tässä teht�
 - `git checkout -- file`
 - `git reset HEAD`
 
-- Jos et vielä hallitse komentoja, käy läpi kurssin Ohjelmistotekniikka
-  [Git-tutoriaali](https://ohjelmistotekniikka-hy.github.io/python/viikko1#versionhallinta-tee-n%C3%A4m%C3%A4-harjoitukset-jos-ei-tunnu-tutulta). Pelkän lukemisen sijaan kannattanee myös tehdä itse tutoriaalin Git-operaatiot.
+- Jos et vielä hallitse komentoja, kertaan kurssin 
+  [Ohjelmointi 2 Git -materiaali](https://tim.jyu.fi/view/kurssit/tie/ohj2/tyokalut/git/ohj2git).
 
 Lisää Git-ohjeita löytyy runsaasti internetistä, esim:
 
@@ -176,7 +171,7 @@ Lisää Git-ohjeita löytyy runsaasti internetistä, esim:
 
 **git add -p**
 
-- Tutoriaaleissa ei valitettavasti käytetä `git add`-komennon hyödyllistä muotoa `git add -p`
+- Tutoriaaleissa ei valitettavasti käytetä `git add`-komennon hyödyllistä muotoa `git add -p` (katso <https://gist.github.com/mattlewissf/9958704>)
 - Tee muutoksia muutamiin tiedostoihin ja lisää muutokset staging-alueelle komennon git add -p avulla
 - Jos lisäät projektiin uusia tiedostoja, ei `git add -p` huomaa niitä, eli ne on lisättävä staging-alueelle erikseen
 - _Käytä jatkossa komentoa `git add -p` aina kun se on suinkin mahdollista!_
@@ -231,7 +226,7 @@ Valmistaudutaan seuraavaan tehtävään siivoamalla repositoriostamme ylimäär�
 
 Haetaan sitten seuraavissa tehtävissä käytettävä koodi:
 
-- Hae osoitteesta <https://github.com/ohjelmistotuotanto-hy/tehtavat/raw/main/viikko1/varasto.zip> löytyvä zipattu paketti
+- Hae osoitteesta <https://github.com/ohjelmistotuotanto-jyu/tehtavat/raw/main/viikko1/varasto.zip> löytyvä zipattu paketti
 - Pura paketti sopivaan paikkaan
 - Siirrä paketin sisällä olevat tiedostot kloonattuun repositorioon siten, että **paketissa olevat tiedostot ja hakemistot tulevat repositorion juureen**
 - Repositoriosi sisältävän hakemiston tulee nyt näyttää seuraavalta
@@ -255,11 +250,11 @@ Tämän kurssin ohjelmointitehtävissä käytetään Pythonia. Python asennuksen
 python3 --version
 ```
 
-Jos Python on asennettu, komennon suorittaminen tulostaa asennetun Pythonin version. Varmista, että käytössä oleva versio on _vähintään 3.10.0_. Jos `python3`-komentoa ei löydy, kokeile komentoa `python`. Varmista kuitenkin, että `python`-komento suorittaa tarpeeksi uutta versiota. Jos asennusta ei löydy, tai käytössä on vanhempi versio, seuraa [ohjelmointikurssien](https://www.mooc.fi/fi/installation/vscode) ohjeita Pythonin asentamiselle.
+Jos Python on asennettu, komennon suorittaminen tulostaa asennetun Pythonin version. Varmista, että käytössä oleva versio on _vähintään 3.10.0_. Jos `python3`-komentoa ei löydy, kokeile komentoa `python`. Varmista kuitenkin, että `python`-komento suorittaa tarpeeksi uutta versiota. Jos asennusta ei löydy, tai käytössä on vanhempi versio, voit seurata esim Helsingin yliopiston [ohjelmointikurssien](https://www.mooc.fi/fi/installation/vscode) ohjeita Pythonin asentamiselle.
 
 Asennusohjeista löytyy myös ohjeet Visual Studio Code -editorin asentamiselle. Kurssin tehtäviä ei kuitenkaan palauteta TMC-liitännäisen avulla, joten VS Code -liitännäinen ei ole välttämätön kurssin suorittamiselle. Voit siis halutessasi käyttää kurssilla myös mitä tahansa muuta editoria.
 
-Ohjelmoinnin peruskursseilla olet saattanut suorittaa koodia painamalla VS Coden nuoli-painiketta, ja testejä painamalla silmä-painiketta. Ammattimaisessa ohjelmistokehityksessä koodin suorittaminen ja testaamisen on tapahduttava toistettavalla tavalla, ja siten että operaatiot pystytään suorittamaan millä tahansa koneella, _skriptatusti_ komentoriviltä, eli riippumatta VS Coden kaltaisista kehitysympäristöistä.
+Ohjelmoinnin peruskursseilla olet suorittanyt koodia Timissä tai paikallisisesti eri IDEillä. Ammattimaisessa ohjelmistokehityksessä koodin suorittaminen ja testaamisen on tapahduttava toistettavalla tavalla, ja siten että operaatiot pystytään suorittamaan millä tahansa koneella, _skriptatusti_ komentoriviltä, eli riippumatta VS Coden kaltaisista kehitysympäristöistä.
 
 Koodin suorittaminen komentoriviltä `python3`-komennolla ei itsessään ole kovin hankalaa. Ongelmia alkaa syntyä vasta, kun projekti tarvitsee ulkoisia _riippuvuuksia_ erilaisten asennettavien kirjastojen muodossa. Kirjastojen asennukseen ja hallintaan tarvitaan erilisiä työkaluja. Pythonin kohdalla suosituin komentorivityökaluja tähän tarkoitukseen on [pip](https://pypi.org/project/pip/).
 
@@ -316,7 +311,7 @@ eräs tapa korjata tilanne Macilla ja ehkä myös Linuxilla on editoida tiedosto
 #!/usr/bin/python
 ```
 
-Polku tulee Macilla muuttaa (todennäköisesti) muotoon
+Polku tulee vanhemmilla Maceilla muuttaa (todennäköisesti) muotoon
 
 ```
 #!/usr/local/bin/python3
@@ -328,7 +323,7 @@ Oikea polku kannattaa varmistaa komennolla `which python3`.
 
 Ohjelmistokehityksen ehkä tärkein vaihe on laadunvarmistus, laadunvarmistuksen tärkein keino taas on testaus, joka on syytä automatisoida mahdollisimman pitkälle, sillä ohjelmistoja joudutaan testaamaan paljon. Erityisesti iteratiivisessa/ketterässä ohjelmistokehityksessä samat testit on suoritettava uudelleen aina ohjelman muuttuessa.
 
-Python-maailmassa automatisoidun testaamisen johtava työkalu on [unittest](https://docs.python.org/3/library/unittest.html), johon olet todennäköisesti jo tutustunut kurssilla Ohjelmistotekniikka. Jos unittest on vieras, tai päässyt unohtumaan, kertaa sen perusteet [tästä unittest-ohjeesta](/unittest).
+Python-maailmassa automatisoidun testaamisen johtava työkalu on [unittest](https://docs.python.org/3/library/unittest.html). Jos unittest on vieras, kertaa sen perusteet [tästä unittest-ohjeesta](/unittest).
 
 Edellisen tehtävän esimerkkisovelluksessa on jo jonkun verran unittest-testejä, **laajennetaan nyt testejä**.
 
@@ -546,9 +541,8 @@ on:
 # ...
 ```
 
-Olemme käyttäneet nimeä _CI_, nimi voi kuitenkin olla mikä vaan.
+Olemme käyttäneet nimeä _CI_, nimi voi kuitenkin olla mikä vaan, esimerkiksi:
 
-Esimerkiksi omassa tapauksessani badgelinkki on
 
 ```
 https://github.com/mluukkai/ohtuvarasto/workflows/CI/badge.svg
@@ -682,203 +676,7 @@ Pushaa koodi GitHubiin ja varmista, että Codecov generoi raportin siten, että 
 
 ### Tehtävien palautusrepositoriot
 
-Kuten jo aiemmin todettiin, tällä viikolla tehdään palautusta varten **kaksi erillistä** GitHub-repositoria:
 
-- ensimmäinen (nimeltään ohtuvarasto) tehtäviä 2-13 varten ja
-- toinen tehtäviä 14-17 varten (käytetään tästä nimitystä **palautusrepositorio**)
-
-Repositorioista jäkimmäistä (johon tehtävät 14-17 palautetaan) käytetään myös muiden viikkojen tehtävien palautusrepositoriona.
-
-Luo siis nyt **uusi repositorio**.
-
-Nyt luotavan palautusrepositorion rakenne voi olla esimerkiksi seuraava:
-
-```
-viikko1
-  riippuvuuksien-injektointi-1
-  nhl-statistics-1
-viikko2
-  poetry-web
-  project-reader
-  nhl-reader
-viikko3
-  login-robot
-  web-login-robot
-...
-```
-
-### 14. Riippuvuuksien injektointi osa 1
-
-**Tämä tehtävä tehdään juuri luomaasi palautusrepositorioon, eli EI KÄYTETÄ ohtuvarasto-repositorioa mihin teit tehtävät 2-13**
-
-- tehtävässä ei tosin tehdä itse mitään koodia...
-
-Tutustumme kurssin aikana muutamiin _suunnittelumalleihin_ (engl. design pattern), eli hyviksi tunnettuihin useisiin erilaisiin tilanteisiin sopiviin ratkaisutapoihin, joiden soveltaminen usein parantaa koodin laatua.
-
-Kurssin ensimmäinen suunnittelumalli _riippuvuuksien injektointi_ (engl. dependency injection), on yksinkertainen periaate, jota noudattamalla koodin automatisoitua testaamista on monissa tilanteissa mahdollista helpottaa ratkaisevalla tavalla.
-
-- Tutustu riippuvuuksien injektointiin lukemalla [tämä dokumentti](/riippuvuuksien_injektointi_python/)
-- Hae esimerkkiprojekti kurssin [tehtävärepositorion]({{site.python_exercise_repo_url}}) hakemistosta _viikko1/riippuvuuksien-injektointi-1_ ja kokeile että se toimii
-  - Järkevintä lienee että kloonaat repositorion paikalliselle koneellesi
-  - **Tämän jälkeen kannattaa kopioida projekti tehtävien 14-17 palautukseen käyttämäsi palautusrepositorion sisälle**
-  - **HUOM** lue 15 cm ylempää miten koodi kannattaa organisoida palautusrepositorion sisälle
-
-Tutustu riippuvuuksien injektointiin esimerkin avulla. Asenna projektin riippuvuudet sen juurihakemistossa (eli hakemistossa missä tiedosto _pyproject.toml_ sijaitsee) komennolla `poetry install`. Tämän jälkeen saat suoritettua koodin virtuaaliympäristön sisällä komennolla `python3 src/index.py`. Voit myös halutessasi suorittaa testit virtuaaliympäristön sisällä komennolla `pytest`. Jos unohtui miten virtuaaliympäristön sisälle päästään, kertaa asia tehtävästä 7...
-
-### 15. Riippuvuuksien injektointi osa 2: NHL-tilastot
-
-**Tämä tehtävä tehdään juuri luomaasi palautusrepositorioon, eli EI KÄYTETÄ ohtuvarasto-repositorioa mihin teit tehtävät 2-13**
-
-- Kurssin [tehtävärepositorion]({{site.python_exercise_repo_url}}) hakemistossa _viikko1/nhl-statistics-1_ on ohjelma, jonka avulla on mahdollista tutkia <https://nhl.com>-sivulla olevia tilastotietoja (vaihtamalla sovelluksen käyttämää URL:ia, voit katsoa eri kausien tilastoja)
-  - Kopioi projekti **palautusrepositorion** alle omaksi hakemistoksi
-    - HUOM: nyt EI KÄYTETÄ tehtävien 2-13 ohtuvarasto-repositorioa!
-  - Asenna projektin riippuvuudet suorittamalla sen juurihakemistossa komento `poetry install`
-- Ohjelma koostuu kolmesta luokasta.
-  - `StatisticsService` on palvelun tarjoava luokka, se tarjoaa metodit yhden pelaajan tietojen näyttämiseen, pistepörssin näyttämiseen ja yhden joukkueen pelaajien tietojen näyttämiseen
-  - `Player` on luokka, jonka olioina `StatisticsService`-luokka käsittelee yksittäisen pelaajan tietoja
-  - `PlayerReader` on luokka, jonka avulla ohjelma käy hakemassa pelaajien tiedot internetistä
-- Ohjelma on nyt ikävästi struktoroitu ja esim. yksikkötestaus on kovin hankalaa
-
-**Itse tehtävä:**
-
-- Muokkaa ohjelman rakennetta siten, että `StatisticsService`-luokka saa konstruktoriparametrina `PlayerReader`-luokan olion, ja että `PlayerReader` saa konstruktoriparametrina osoitteen mistä se hakee pelaajien tiedot
-- Muokkaa pääohjelma siten, että se injektoi `StatisticsService`-oliolle `PlayerReader`-luokan olion (jolle on annettu konstruktoriparametrina haluttu osoite) ja kokeile että ohjelma toimii edelleen:
-
-```python
-stats = StatisticsService(
-  PlayerReader("https://studies.cs.helsinki.fi/nhlstats/2022-23/players.txt")
-)
-```
+Pushaa kaikki tekemäsi tehtävät (paitsi ne, joissa mainitaan, että tehtävää ei palauteta mihinkään) GitHubiin palautusrepositorioosi ja merkkaa tekemäsi tehtävät Timiin <{{site.stats_url}}>.
 
 
-**HUOM:** jos törmäät virheeseen `URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed`, mahdollinen ratkaisu ongelmaan löytyy [täältä](https://stackoverflow.com/a/42334357).
-
-### 16. NHL-tilastot-ohjelman yksikkötestaus
-
-**Tämä tehtävä tehdään juuri luomaasi palautusrepositorioon, eli EI KÄYTETÄ ohtuvarasto-repositorioa mihin teit tehtävät 2-13**
-
-- Tee yksikkötestit luokalle `StatisticsService`
-  - Muista nimetä testitiedosto, testiluokka ja testimetodit [unittest-ohjeiden](/unittest) mukaisesti. Muuten Pytest ei löydä suoritettavia testejä
-  - Testien haarautumakattavuuden tulee `StatisticsService`-luokan osalta olla 100% (mittaa kattavuus coveragen avulla, katso [tehtävä 8](https://ohjelmistotuotanto-hy.github.io/tehtavat1#8-unittest))
-    - Huomaa, että kattavuusraportti ei generoidu ennen kun sovellukseen on lisätty testejä
-  - Testit eivät saa käyttää verkkoyhteyttä
-  - Verkkoyhteyden tarpeen saat eliminoitua luomalla testiä varten `PlayerReader`-luokkaa muistuttavan "stubin", jonka sisälle kovakoodaat palautettavan pelaajalistan
-
-```python
-import unittest
-from statistics_service import StatisticsService
-from player import Player
-
-class PlayerReaderStub:
-    def get_players(self):
-        return [
-            Player("Semenko", "EDM", 4, 12),
-            Player("Lemieux", "PIT", 45, 54),
-            Player("Kurri",   "EDM", 37, 53),
-            Player("Yzerman", "DET", 42, 56),
-            Player("Gretzky", "EDM", 35, 89)
-        ]
-
-class TestStatisticsService(unittest.TestCase):
-    def setUp(self):
-        # annetaan StatisticsService-luokan oliolle "stub"-luokan olio
-        self.stats = StatisticsService(
-            PlayerReaderStub()
-        )
-
-    # ...
-```
-
-Kun injektoit `PlayerReaderStub`-olion testissä `StatisticsService`-oliolle, palauttaa se aina saman pelaajalistan.
-
-### 17. NHL-tilastot-ohjelman laajennus
-
-**Tämä tehtävä tehdään juuri luomaasi palautusrepositorioon, eli EI KÄYTETÄ ohtuvarasto-repositorioa mihin teit tehtävät 2-13**
-
-Muuta luokan `StatisticsService` metodia `top` siten, että sille voidaan antaa toinen parametri, joka määrittelee millä "parhausperusteella" metodi palauttaa pelaajat.
-
-Metodin toiminnallisuus selviää seuraavasta:
-
-```python
-from statistics_service import StatisticsService, SortBy
-from player_reader import PlayerReader
-
-def main():
-    stats = StatisticsService(
-      PlayerReader("https://studies.cs.helsinki.fi/nhlstats/2021-22/players.txt")
-    )
-
-    # järjestetään kaikkien tehopisteiden eli maalit+syötöt perusteella
-    print("Top point getters:")
-    for player in stats.top(10, SortBy.POINTS):
-        print(player)
-
-    # metodi toimii samalla tavalla kuin yo. kutsu myös ilman toista parametria
-    for player in stats.top(10):
-        print(player)
-
-    # järjestetään maalien perusteella
-    print("Top point goal scorers:")
-    for player in stats.top(10, SortBy.GOALS):
-        print(player)
-
-    # järjestetään syöttöjen perusteella
-    print("Top by assists:")
-    for player in stats.top(10, SortBy.ASSISTS):
-        print(player)
-```
-
-Järjestämiskriteeri määritellään [Enum](https://docs.python.org/3/library/enum.html)-arvona:
-
-```python
-from enum import Enum
-
-class SortBy(Enum):
-    POINTS = 1
-    GOALS = 2
-    ASSISTS = 3
-```
-
-Määrittele Enum tiedostossa statistics_service.py esim. ennen luokan StatisticsService määrittelyä.
-
-Tee myös testit, jotka varmentavat metodin uuden version toiminnallisuuden. Jos StatisticsService-luokan käyttämä järjestämistapa näyttää vieraalta, Ohjelmointikurssin [materiaalissa](https://ohjelmointi-22.mooc.fi/osa-12/1-funktio-parametrina) avataan asiaa hieman tarkemmin.
-
-#### Miksi Enum?
-
-Miksi tehtävässä 17 halutaan että järjestämisen periaate ilmaistaan enumien avulla? Eikö ihan yhtä hyvin voitaisi ilmaista vaikkapa numeron avulla mikä haluttu järjestys on, eli kirjoittaa koodi seuraavasti:
-
-```python
-def main():
-    stats = StatisticsService(
-      PlayerReader("https://studies.cs.helsinki.fi/nhlstats/2021-22/players.txt")
-    )
-
-
-    # järjestetään pisteiden perusteella, parametrina oleva 1 määrää järjestyksen
-    for player in stats.top(10, 1):
-        print(player)
-
-    # järjestetään syöttöjen perusteella, parametrina oleva 3 määrää järjestyksen
-    print("Top by assists:")
-    for player in stats.top(10, 3):
-        print(player)
-```
-
-Periaatteessa tämä kyllä toimisi. Tälläistä tapaa kutsutaan [taikanumeroiden](https://stackoverflow.com/questions/47882/what-are-magic-numbers-and-why-do-some-consider-them-bad) käytöksi. Tapaa pidetään ohjelmoijien keskuudessa erittäin paheksuttavana. Alun perin koodin kirjoittanut muistaa ehkä hetken mitä taikanumerot ilmaisevat. Kun aikaa kuluu ja koodarit vaihtuvat alkaa asia kuitenkin hämärtymään ja on omiaan aiheuttamaan ikäviä bugeja. Tämän takia taikanumeroita tulee välttää, ja käyttää niiden sijaan esim. enumeita tai vaikkapa vakioita (eli muuttujia joiden arvoa ei muuteta).
-
-### Tehtävien palautus
-
-Lisää tehtävät 14-17 sisältävään repositorioosi (eli ns. palautusrepositorioosi) tiedosto _README.md_, mihin laitat linkin tehtävät 2-13 sisältävään ohtuvarasto-repositoroosi.
-
-Palautusrepositorion pitäisi näyttää nyt suunnilleen seuraavalta
-
-![]({{ "/images/lh1-31-22.png" | absolute_url }})
-
-Pushaa kaikki tekemäsi tehtävät (paitsi ne, joissa mainitaan, että tehtävää ei palauteta mihinkään) GitHubiin palautusrepositorioosi ja merkkaa tekemäsi tehtävät palautussovellukseen <{{site.stats_url}}>, välilehdelle _my submissions_.
-
-- Kerro palautussovelluksessa tehtävät 14-17 sisältävä repositoriosi.
-- Jos et tehnyt tehtäviä 14-17, voit laittaa linkin tehtävät 2-13 sisältävään ohtuvarasto-repositorioon.
-
-Palautuslomakkeen löydät painamalla sinistä nappia
-
-![]({{ "/images/lh1-palautus.png" | absolute_url }})
