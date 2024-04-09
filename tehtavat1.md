@@ -18,22 +18,11 @@ Tämän viikon tehtävissä harjoitellaan ensin muutaman tärkeän ohjelmistokeh
 
 ### Tehtävien palauttaminen
 
-Tehtävät palautetaan GitHubiin, sekä merkitsemällä tehdyt tehtävät Timiin: <{{site.stats_url}}>. Viikon tehtävät palautetaan yhdellä kertaa, eli tee merkintä palautussovellukseen vasta kun olet valmis viikon tehtävien osalta.
+Tehtävät palautetaan GitHubiin, sekä merkitsemällä tehdyt tehtävät [Timiin](https://tim.jyu.fi/view/kurssit/tie/tjta330/ohjelmistotuotanto-k2024/tehtavat/konfigurointitehtavat-osa-1). Viikon tehtävät palautetaan yhdellä kertaa, eli tee merkintä palautussovellukseen vasta kun olet valmis viikon tehtävien osalta.
 
-Käytännössä tällä viikolla tehdään palautusta varten **kaksi erillistä** GitHub-repositoria:
+Käytännössä tällä viikolla tehdään palautusta varten yksi gitHub repositoria nimeltään ohtuvarasto.Jos et vielä tiedä mikä on GitHub ja repositorio, niin pian opit.
 
-- ensimmäinen (nimeltään ohtuvarasto) tehtäviä 2-13 varten ja
-- toinen tehtäviä 14-17 varten (käytetään tästä nimitystä **palautusrepositorio**)
-
-Repositorioista jälkimmäistä (johon tehtävät 14-17 palautetaan) käytetään myös muiden viikkojen tehtävien palautusrepositoriona.
-
-Jos et vielä tiedä mikä on GitHub ja repositorio, niin pian opit.
-
-Tehtäviä 0 ja 1 ei varsinaisesti palauteta minnekään. Tehtävää 0 ei myöskään lasketa varsinaiseksi tehtäväksi, sen tekeminen ei vaikuta laskaripisteisiin.
-
-### 0. Orientaatio
-
-Lue nyt vielä kerran mitä tehtävien palauttamisesta sanotaan. Tällä viikolla siis tehtävät palautetaan kahteen repositorioon...
+Tehtävää 1 ei varsinaisesti palauteta minnekään, eikä sitä arvostella.
 
 ### 1. Komentorivi
 
@@ -672,8 +661,7 @@ Konfiguraatiossa määritellä pilkulla eroteltuna niin kutsuttaja [glob](<https
 
 Pushaa koodi GitHubiin ja varmista, että Codecov generoi raportin siten, että _src/index.py_-tiedosto ja _src/tests_-hakemiston tiedostot jätetään huomioimatta.
 
-### Tehtävien palautusrepositoriot
-
+### Tehtävien palauttaminen
 
 Pushaa kaikki tekemäsi tehtävät (paitsi ne, joissa mainitaan, että tehtävää ei palauteta mihinkään) GitHubiin palautusrepositorioosi ja merkkaa tekemäsi tehtävät [Timiin](https://tim.jyu.fi/view/kurssit/tie/tjta330/ohjelmistotuotanto-k2024/tehtavat/konfigurointitehtavat-osa-1)
 
