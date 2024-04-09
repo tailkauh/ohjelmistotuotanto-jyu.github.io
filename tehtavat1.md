@@ -6,11 +6,9 @@ permalink: /tehtavat1
 ---
 
 
-{% include laskari_info.md part=1 %}
 
 Tämän viikon tehtävissä harjoitellaan ensin muutaman tärkeän ohjelmistokehityksen työkalun (_komentorivi, versionhallinta, riippuvuuksien hallinta, automatisoitu testaus, jatkuva integraatio_) käyttöä. 
 
-Laskarien lopuksi harjoitellaan _riippuvuuksien injektointia_, joka on melko simppeli mutta erittäin käyttökelpoinen tekniikka, jonka avulla sovellusten testattavuutta on mahdollista parantaa.
 
 ### Typoja tai epäselvyyksiä tehtävissä?
 
