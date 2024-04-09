@@ -24,8 +24,8 @@ Tehtävien vaikutus kurssin arvosteluun selviää [osasta 0](/osa0#kurssin-arvos
 
 ### Viikko 2
 
-- teoriatehtävät
-- konfigurointitehtävät
+- teoriatehtävät deadline 14.1.
+- [ohjelmointi/versionhallinta/konfigurointitehtävät](/tehtavat1) deadline 15.1.
 
 ### Viikko 3
 
