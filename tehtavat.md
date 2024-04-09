@@ -24,7 +24,7 @@ Tehtävien vaikutus kurssin arvosteluun selviää [osasta 0](/osa0#kurssin-arvos
 
 ### Viikko 2
 
-- teoriatehtävät deadline 14.1.
+- [teoriatehtävät](https://tim.jyu.fi/view/kurssit/tie/tjta330/ohjelmistotuotanto-k2024/tehtavat/teoriatehtavat-osa-1) deadline 14.1.
 - [ohjelmointi/versionhallinta/konfigurointitehtävät](/tehtavat1) deadline 15.1.
 
 ### Viikko 3
