@@ -622,10 +622,10 @@ Saamme muodostettua Codecovin ymmärtämän testikattavuusraportin käyttämäll
 ```
 
 
-**HUOM1** rivit on sisennettävä samalle tasolle kuin muut stepit.
+**HUOM** rivit on sisennettävä samalle tasolle kuin muut stepit.
 
-Aiemmin codevoc ei vaatinut julkisten repositorioiden osalta upload tokenin käyttöä, mutta nykyisin tällainen tarvitaan. Käytännössä Codecovin upload token on avain, jonka avulla palvelu tunnistaa sinut. Tällaisten avainten käytölle on tyypillistä, että niitä ei haluta kaikkien saataville julkiseen repositorioon. Avaimen luominen ja lisääminen Github Actioneiden käyttöön on selitetty [Codecovin dokumentaatiossa)[https://docs.codecov.com/docs/adding-the-codecov-token). Laajemmin sailaisuuksien sisällyttämisestä Githubiin on kuvattu
-[Githubin dokumentaatiossa)[https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions]
+Aiemmin codevoc ei vaatinut julkisten repositorioiden osalta upload tokenin käyttöä, mutta nykyisin tällainen tarvitaan. Käytännössä Codecovin upload token on avain, jonka avulla palvelu tunnistaa sinut. Tällaisten avainten käytölle on tyypillistä, että niitä ei haluta kaikkien saataville julkiseen repositorioon. Avaimen luominen ja lisääminen Github Actioneiden käyttöön on selitetty [Codecovin dokumentaatiossa](https://docs.codecov.com/docs/adding-the-codecov-token). Laajemmin sailaisuuksien sisällyttämisestä Githubiin on kuvattu
+[Githubin dokumentaatiossa](https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions).
 
 Kertauksena:
 
