@@ -616,7 +616,7 @@ Saamme muodostettua Codecovin ymmärtämän testikattavuusraportin käyttämäll
 - name: Coverage report to Codecov
   uses: codecov/codecov-action@v3
   env:
-    CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+    CODECOV_TOKEN: $\{\{ secrets.CODECOV_TOKEN \}\}
 ```
 
 **HUOM1** rivit on sisennettävä samalle tasolle kuin muut stepit.
