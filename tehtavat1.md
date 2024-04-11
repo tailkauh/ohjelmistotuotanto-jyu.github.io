@@ -610,9 +610,8 @@ Saatat joutua odottamaan hetken, ennen kuin Codecov löytää repositoriosi. On 
 
 Saamme muodostettua Codecovin ymmärtämän testikattavuusraportin käyttämällä `coverage html`-komennon sijaan komentoa `coverage xml`. Kyseinen komento muodostaa XML-muotoisen testikattavuusraportin. Lisätään GitHub Action -konfiguraatiomme loppuun kaksi uutta askelta:
 
-```
+```yml
 {% raw %}
-yml
 - name: Coverage report
   run: poetry run coverage xml
 - name: Coverage report to Codecov
