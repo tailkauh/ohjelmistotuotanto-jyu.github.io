@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Viikko 1
+title: Osa 1
 inheader: no
 permalink: /tehtavat1
 ---
@@ -264,7 +264,7 @@ Ohjelmakoodin editointi kannattaa tehdä järkevällä editorilla, esim. Visual 
 
 {% include no_pip.md %}
 
-Ennen siirtymistä tehtävien pariin, ja et ole aiemmin Poetryä käyttänyt, tutustu Poetryn asennus- ja käyttöohjeisiin lukemalla [tämä dokumentti](https://ohjelmistotuotanto-hy.github.io/poetry). Kurssilla käytetään Poetryn versiota 1.6.1. Jos koneellasi on vanhempi versio, se on syytä päivittää.
+Ennen siirtymistä tehtävien pariin, ja et ole aiemmin Poetryä käyttänyt, tutustu Poetryn asennus- ja käyttöohjeisiin lukemalla [tämä dokumentti](https://ohjelmistotuotanto-jyu.github.io/poetry). Kurssilla käytetään Poetryn versiota 1.6.1. Jos koneellasi on vanhempi versio, se on syytä päivittää.
 
 **Tee nyt seuraavat toimenpiteet**.
 

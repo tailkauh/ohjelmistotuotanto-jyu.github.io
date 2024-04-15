@@ -1,15 +1,12 @@
 ---
 layout: page
-title: Viikko 2
+title: Osa 2
 inheader: no
 permalink: /tehtavat2/
 ---
 
-{% include miniproj_ilmo.md %}
 
-{% include laskari_info.md part=2 %}
-
-Viikon ensimmäisessä ja toisessa tehtävässä tutustutaan koodin _staattiseen analyysin_ Pylint-työkalun avulla. Gitiin tutustuminen jatkuu tehtävissä 5-9. Laskarien lopuksi jatketaan _riippuvuuksien injektoinnin_ parissa. Tehtävissä 10-12 koodataan ja refaktoroidaan koodia siistimmäksi.
+Tehtävissä tutustutaan koodin _staattiseen analyysin_ Pylint-työkalun avulla, _riippuvuuksien injektointiin_ ja jatketaan Gitiin tutustumista.
 
 ### Typoja tai epäselvyyksiä tehtävissä?
 
@@ -19,26 +16,136 @@ Viikon ensimmäisessä ja toisessa tehtävässä tutustutaan koodin _staattiseen
 
 {% include poetry_ongelma.md %}
 
-### Tehtävien palauttaminen
+### 1. Pylint ja koodin staattinen analyysi
 
-Osa git-tehtävistä (tehtävät 5-7) tehdään ainoastaan paikalliseen repositorioon, eli ne eivät näy palautuksessa mitenkään.
+**Tämä ja seuraava tehtävä tehdään viime viikon tehtävissä käytettyyn ohtuvarasto-repositorioon**
 
-Muut Tehtävät palautetaan GitHubiin, sekä merkitsemällä tehdyt tehtävät palautussovellukseen <{{site.stats_url}}> välilehdelle "my submission".
+Kurssin [kolmannessa osassa](/osa3) teemana on ohjelmien laadun varmistaminen. Eräs ohjelman laatua useimmiten edistävä tekijä on järkevän _koodityylin_ noudattaminen. Koodin tyyliä voidaan tarkkailla automatisoidusti niin sanottujen staattisen analyysin työkaluilla.
 
-Tehtävät 3 ja 4 laajentavat viime viikon ensimmäistä tehtäväsarjaa, eli ne palautetaan **ohtuvarasto**-repositorioon, siis samaan mitä käytettiin viikon 1 tehtävissä 2-13. Muut tehtävät palautetaan **palautusrepositorioon**, eli samaan mihin palautit ensimmäisen viikon tehtävät 14-17.
+Tutustutaan nyt staattisen analyysin työkaluun nimeltään [Pylint](https://pylint.pycqa.org/en/latest/index.html). Ennen kuin syvennymme aiheeseen, tutustu pylintin käyttöön lukemalla kurssilta Ohjelmistotekniikka lainattu [Pylint-ohje](/pylint).
 
-Katso tarkempi ohje palautusrepositorioita koskien [täältä](/tehtavat1#teht%C3%A4vien-palautusrepositoriot).
+**Mene nyt edellisen viikon varasto-projektiin liittyvien tehtävien palautusrepositorioosi.**
 
-### 1. Poetryn harjoittelua
+Ota varasto-projektissa käyttöön Pylint noudattamalla lukemiasi ohjeita. Konfiguraationa käytettävän _.pylintrc_-tiedoston sisältö tulee toistaiseksi olla [tämän]({{site.python_exercise_repo_url}}/blob/main/viikko2/varasto/.pylintrc) tiedoston sisällön mukainen.
 
-**Tämä tehtävä tehdään palautusrepositorioon**, siis samaan mihin tehtiin viikon 1 tehtävät 14-17
+Pylintin tarkistamat säännöt konfiguroidaan _.pylintrc_-tiedostoon oikeiden osioiden alle. `[main]`-osio sisältää yleistä konfiguraatio, kuten mitkä hakemistot tai tiedostot pitäisi jättää tarkistuksien ulkopuolelle. `[MESSAGE CONTROL]`-osiossa taas voidaan määritellä esimerkiksi tarkistuksia, joista ei tarvitse huomauttaa. Loput osiot ovat eri sääntöjen konfigurointia varten, jotka on dokumentoitu pylintin [dokumentaatiossa](http://pylint.pycqa.org/en/v3.0.2/technical_reference/features.html). Jos haluamme esimerkiksi asettaa funktioiden ja metodien argumenttien maksimilukumäärään neljään, voimme lisätä sen `[DESIGN]`-osioon seuraavasti:
 
-- Tee palautusrepositorioon hakemisto _viikko2_ ja sen sisälle hakemisto _poetry-web_ tätä tehtävää varten
-- Lue [täältä](/tehtavat2/#tehtävien-palauttaminen) lisää tehtävien palautusrepositorioista
+```
+[DESIGN]
+
+max-args=4
+```
+
+Helpoin tapa löytää sääntöjä on hakemalla sopivalla hakusanalla niitä dokumentaatiosta tai Googlettamalla. Oikean osion löytää dokumentaatiosta (esimerkiksi `max-args`-sääntö löytyy dokumentaatiosta [Design checker](https://pylint.pycqa.org/en/v3.0.2/user_guide/configuration/all-options.html#design-options) -osion alta).
+
+**Toimi nyt seuraavasti:**
+
+- Siirry virtuaaliympäristöön komennolla `poetry shell` ja suorita sen sisällä komento `pylint src`. Jos tarkistuksissa löytyy virheitä, korjaa ne
+- Määrittele nyt tiedostoon _.pylintrc_ seuraavat säännöt (katso lista säännöistä pylintin [dokumentaatiosta](http://pylint.pycqa.org/en/v3.0.2/technical_reference/features.html)):
+
+  - Rivin pituus on maksimissaan 80 merkkiä
+    - Vinkki: sääntö löytyy [Format checker](https://pylint.pycqa.org/en/v3.0.2/user_guide/configuration/all-options.html#format-options) -osiosta ja tulee määrittää `[FORMAT]`-osion alle
+  - Ei yli kahta sisäkkäistä lohkoa (esimerkiksi if- tai for-lohkoa) funktion tai metodin sisällä
+    - Vinkki: sääntö löytyy [Refactoring checker](https://pylint.pycqa.org/en/v3.0.2/user_guide/configuration/all-options.html#refactoring-options) -osiosta ja tulee määrittää `[REFACTORING]`-osion alle)
+  - Funktiossa tai metodissa on enintään 15 lausetta (statements), etsi sääntö dokumentaatiosta
+  - Määrittele myös jokin itse valitsemasi, mielenkiintoiselta/hyödylliseltä kuulostava sääntö
+
+- Muuta koodiasi siten, että saat jokaisen määritellyistä pylint-säännöistä rikkoutumaan
+- Korjaa koodisi ja varmista, että se noudattaa kaikkia sääntöjä
+
+Usein _.pylintrc_-konfiguraatiota ei ole järkevää kirjoittaa tyhjästä käsin, vaan käytetään lähtökohtana pylintin suosittelemaa konfiguraatiota. Suositellun konfiguraation voi tulostaa komentoriville komennolla `pylint --generate-rcfile`.
+
+### 2. Koodin staattinen analyysi ja GitHub Actionit
+
+**Tämä tehtävä tehdään edellisen viikon tehtävissä käytettyyn ohtuvarasto-repositorioon**
+
+Laajenna ohtuvarastosi GitHub Actionien määritelmää siten, että myös Pylint-tarkastukset suoritetaan aina kun koodi pushataan GitHubiin.
+
+Varmista, että GitHub huomaa tilanteen, missä koodi rikkoo projektin Pylint-sääntöjä:
+
+![]({{ "/images/py-lh2-11.png" | absolute_url }})
+
+Varmista myös, että kun korjaat koodin, kaikki toimii taas moitteettomasti:
+
+![]({{ "/images/py-lh2-12.png" | absolute_url }})
+
+
+### 3. Palautusrepositorion luominen
+
+Seuraavat tehtävät palautetaan eri repositorioon, kuin aikaisemmissa tehtävissä käytetty ohtuvarasto. Luo siis ny **uusi repositorio**.
+
+Nyt luotavan palautusrepositorion rakenne voi olla esimerkiksi seuraava:
+
+```
+osa2
+  riippuvuuksien-injektointi-1
+  nhl-statistics-1
+  poetry-web
+  project-reader
+  nhl-reader
+osa3
+  login-robot
+...
+```
+
+Tätä tehtävää ei palaute tai arvostella.
+
+### 4. Riippuvuuksien injektointi osa 1
+
+**Tämä tehtävä tehdään juuri luomaasi palautusrepositorioon, eli EI KÄYTETÄ ohtuvarasto-repositorioa mihin teit tehtävät 2-13**
+
+- tehtävässä ei tosin tehdä itse mitään koodia...
+
+Tutustumme kurssin aikana muutamiin _suunnittelumalleihin_ (engl. design pattern), eli hyviksi tunnettuihin useisiin erilaisiin tilanteisiin sopiviin ratkaisutapoihin, joiden soveltaminen usein parantaa koodin laatua.
+
+Kurssin ensimmäinen suunnittelumalli _riippuvuuksien injektointi_ (engl. dependency injection), on yksinkertainen periaate, jota noudattamalla koodin automatisoitua testaamista on monissa tilanteissa mahdollista helpottaa ratkaisevalla tavalla.
+
+- Tutustu riippuvuuksien injektointiin lukemalla [tämä dokumentti](/riippuvuuksien_injektointi_python/)
+- Hae esimerkkiprojekti kurssin [tehtävärepositorion]({{site.python_exercise_repo_url}}) hakemistosta _osa2/riippuvuuksien-injektointi-1_ ja kokeile että se toimii
+  - Järkevintä lienee että kloonaat repositorion paikalliselle koneellesi
+  - **Tämän jälkeen kannattaa kopioida projekti edellisessä tehtävässä luomasi palautusrepositorion sisälle**
+  - **HUOM** lue 15 cm ylempää miten koodi kannattaa organisoida palautusrepositorion sisälle
+
+Tutustu riippuvuuksien injektointiin esimerkin avulla. Asenna projektin riippuvuudet sen juurihakemistossa (eli hakemistossa missä tiedosto _pyproject.toml_ sijaitsee) komennolla `poetry install`. Tämän jälkeen saat suoritettua koodin virtuaaliympäristön sisällä komennolla `python3 src/index.py`. Voit myös halutessasi suorittaa testit virtuaaliympäristön sisällä komennolla `pytest`. Jos unohtui miten virtuaaliympäristön sisälle päästään, kertaa asia viime viikon tehtävistä.
+
+### 5. Riippuvuuksien injektointi osa 2: NHL-tilastot
+
+**Myös Tämä tehtävä tehdään juuri luomaasi palautusrepositorioon, eli EI KÄYTETÄ viime viikon ohtuvarasto-repositoriota.**
+
+- Kurssin [tehtävärepositorion]({{site.python_exercise_repo_url}}) hakemistossa _osa2/nhl-statistics-1_ on ohjelma, jonka avulla on mahdollista tutkia <https://nhl.com>-sivulla olevia tilastotietoja (vaihtamalla sovelluksen käyttämää URL:ia, voit katsoa eri kausien tilastoja)
+  - Kopioi projekti **palautusrepositorion** alle omaksi hakemistoksi
+    - HUOM: nyt EI KÄYTETÄ tehtävien 2-13 ohtuvarasto-repositorioa!
+  - Asenna projektin riippuvuudet suorittamalla sen juurihakemistossa komento `poetry install`
+- Ohjelma koostuu kolmesta luokasta.
+  - `StatisticsService` on palvelun tarjoava luokka, se tarjoaa metodit yhden pelaajan tietojen näyttämiseen, pistepörssin näyttämiseen ja yhden joukkueen pelaajien tietojen näyttämiseen
+  - `Player` on luokka, jonka olioina `StatisticsService`-luokka käsittelee yksittäisen pelaajan tietoja
+  - `PlayerReader` on luokka, jonka avulla ohjelma käy hakemassa pelaajien tiedot internetistä
+- Ohjelma on nyt ikävästi struktoroitu ja esim. yksikkötestaus on kovin hankalaa
+
+**Itse tehtävä:**
+
+- Muokkaa ohjelman rakennetta siten, että `StatisticsService`-luokka saa konstruktoriparametrina `PlayerReader`-luokan olion, ja että `PlayerReader` saa konstruktoriparametrina osoitteen mistä se hakee pelaajien tiedot
+- Muokkaa pääohjelma siten, että se injektoi `StatisticsService`-oliolle `PlayerReader`-luokan olion (jolle on annettu konstruktoriparametrina haluttu osoite) ja kokeile että ohjelma toimii edelleen:
+
+```python
+stats = StatisticsService(
+  PlayerReader("https://studies.cs.helsinki.fi/nhlstats/2022-23/players.txt")
+)
+```
+
+
+**HUOM:** jos törmäät virheeseen `URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed`, mahdollinen ratkaisu ongelmaan löytyy [täältä](https://stackoverflow.com/a/42334357).
+
+
+### 6. Poetryn harjoittelua
+
+**Myös Tämä tehtävä tehdään juuri luomaasi palautusrepositorioon, eli EI KÄYTETÄ viime viikon ohtuvarasto-repositoriota.**
+
+- Tee palautusrepositorioon hakemisto _osa2_ ja sen sisälle hakemisto _poetry-web_ tätä tehtävää varten
 
 {% include no_pip2.md %}
 
-Tässä tehtävässä harjoittelemme lisää Poetryn käyttöä ja tutustumme semanttiseen versiointiin. Apua tehtävän tekoon saa mm. Ohjelmistotekniikka-kurssilta lainatusta [Poetry-ohjeesta](/poetry) ja [Poetryn dokumentaatiosta](https://python-poetry.org/docs/).
+Tässä tehtävässä harjoittelemme lisää Poetryn käyttöä ja tutustumme semanttiseen versiointiin. Apua tehtävän tekoon saa mm. [Poetry-ohjeesta](/poetry) ja [Poetryn dokumentaatiosta](https://python-poetry.org/docs/).
 
 Kuvitellaan tilanne, jossa työskentelet ohjelmistokehittäjänä kehitystiimissä, joka on alkamassa kehittämään web-sovellusta. Olette päätyneet kehittämään sovelluksen Pythonilla ja käyttämään Poetrya riippuvuuksien hallinnassa.
 
@@ -105,15 +212,14 @@ Workspacen konfigurointi luo tiedoston _poetry-web.code-workspace_ jonka sisält
 
 Konfiguroinnin voi tehdä myös luomalla kyseisen sisältöisen tiedoston suoraan projektin alle. Pythonin oikea versio on kuitenkin ehkä valittava itse. Komennon _poetry install_ tulee myös olla suoritettuna jotta kaikki toimisi.
 
-### 2. Riippuvuuksien hyödyntäminen
+### 7. Riippuvuuksien hyödyntäminen
 
-**Tämä tehtävä tehdään palautusrepositorioon**, siis samaan mihin teit edellisen tehtävän
 
 Ohjelmistokehittäjälle tulee usein vastaan tilanne, jossa pitäisi löytää tiettyyn käyttötarkoitukseen sopiva kirjasto. Harjoittelemme kyseistä tilannetta tässä tehtävässä.
 
-[TOML](https://toml.io/en/) on eräs helppolukuinen datan esitysformaatti, jota käytetään usein konfiguraatiotiedostoissa, kuten Poetryn _pyproject.toml_-tiedostossa. [Kurssirepositorion]({{site.python_exercise_repo_url}}) hakemistosta _viikko2/project-reader_ on pohja ohjelmalle, jonka tarkoituksena on lukea projektin tietoja annetusta osoitteesta löytyvästä _pyproject.toml_-tiedostosta.
+[TOML](https://toml.io/en/) on eräs helppolukuinen datan esitysformaatti, jota käytetään usein konfiguraatiotiedostoissa, kuten Poetryn _pyproject.toml_-tiedostossa. [Kurssirepositorion]({{site.python_exercise_repo_url}}) hakemistosta _osa2/project-reader_ on pohja ohjelmalle, jonka tarkoituksena on lukea projektin tietoja annetusta osoitteesta löytyvästä _pyproject.toml_-tiedostosta.
 
-- **Kopioi aluksi projekti palautusrepositorioon hakemiston viikko2 sisälle.**
+- **Kopioi aluksi projekti palautusrepositorioon hakemiston osa2 sisälle.**
 
 Tehtävänäsi on ensin löytää sopiva kirjasto, jonka avulla TOML-muotoisista merkkijonoista voi muodostaa Pythonin tietorakenteita. Voit hyödyntää tässä esimerkiksi [PyPI](https://pypi.org/)-sivuston hakua tai Googlea. PyPI:ssä eräs hyvä hakusana voisi olla esimerkiksi "toml". Tutustu kirjastojen kuvauksiin ja päättele sen perusteella, sopiiko kirjasto käyttötarkoitukseen. Kun löydät sopivan kirjaston, asenna se projektiin Poetryn avulla.
 
@@ -139,7 +245,7 @@ Ohjelman voi käynnistää virtuaaliympäristössä komennolla `python3 src/inde
 
 ```
 Name: Ohtutesting app
-Description: Sovellus joka toimii testisyötteenä ohtun viikon 2 laskareihin
+Description: Sovellus joka toimii testisyötteenä ohtun osan 2 laskareihin
 Dependencies: python, Flask, editdistance
 Development dependencies: coverage, robotframework, robotframework-seleniumlibrary, requests
 ```
@@ -150,7 +256,7 @@ Laajenna ja hio vielä ratkaisua siten, että esimerkkiprojektin osalta lopputul
 
 ```
 Name: Ohtutesting app
-Description: Sovellus joka toimii testisyötteenä ohtun viikon 2 laskareihin
+Description: Sovellus joka toimii testisyötteenä ohtun osan 2 laskareihin
 License: MIT
 
 Authors:
@@ -169,60 +275,9 @@ Development dependencies:
 - requests
 ```
 
-### 3. Pylint ja koodin staattinen analyysi
 
-**Tämä ja seuraava tehtävä tehdään viime viikon tehtävissä 2-13 käytettyyn ohtuvarasto-repositorioon**
 
-Kurssin [kolmannessa osassa](/osa3) teemana on ohjelmien laadun varmistaminen. Eräs ohjelman laatua useimmiten edistävä tekijä on järkevän _koodityylin_ noudattaminen. Koodin tyyliä voidaan tarkkailla automatisoidusti niin sanottujen staattisen analyysin työkaluilla.
-
-Tutustutaan nyt staattisen analyysin työkaluun nimeltään [Pylint](https://pylint.pycqa.org/en/latest/index.html). Pylint on jo ehkä tullut tutuksi kurssilta Ohjelmistotekniikka. Ennen kuin syvennymme aiheeseen, tutustu pylintin käyttöön lukemalla kurssilta Ohjelmistotekniikka lainattu [Pylint-ohje](/pylint).
-
-**Mene nyt viikon 1 varasto-projektiin liittyvien tehtävien palautusrepositorioosi.**
-
-Ota varasto-projektissa käyttöön Pylint noudattamalla lukemiasi ohjeita. Konfiguraationa käytettävän _.pylintrc_-tiedoston sisältö tulee toistaiseksi olla [tämän]({{site.python_exercise_repo_url}}/blob/main/viikko2/varasto/.pylintrc) tiedoston sisällön mukainen.
-
-Pylintin tarkistamat säännöt konfiguroidaan _.pylintrc_-tiedostoon oikeiden osioiden alle. `[main]`-osio sisältää yleistä konfiguraatio, kuten mitkä hakemistot tai tiedostot pitäisi jättää tarkistuksien ulkopuolelle. `[MESSAGE CONTROL]`-osiossa taas voidaan määritellä esimerkiksi tarkistuksia, joista ei tarvitse huomauttaa. Loput osiot ovat eri sääntöjen konfigurointia varten, jotka on dokumentoitu pylintin [dokumentaatiossa](http://pylint.pycqa.org/en/v3.0.2/technical_reference/features.html). Jos haluamme esimerkiksi asettaa funktioiden ja metodien argumenttien maksimilukumäärään neljään, voimme lisätä sen `[DESIGN]`-osioon seuraavasti:
-
-```
-[DESIGN]
-
-max-args=4
-```
-
-Helpoin tapa löytää sääntöjä on hakemalla sopivalla hakusanalla niitä dokumentaatiosta tai Googlettamalla. Oikean osion löytää dokumentaatiosta (esimerkiksi `max-args`-sääntö löytyy dokumentaatiosta [Design checker](https://pylint.pycqa.org/en/v3.0.2/user_guide/configuration/all-options.html#design-options) -osion alta).
-
-**Toimi nyt seuraavasti:**
-
-- Siirry virtuaaliympäristöön komennolla `poetry shell` ja suorita sen sisällä komento `pylint src`. Jos tarkistuksissa löytyy virheitä, korjaa ne
-- Määrittele nyt tiedostoon _.pylintrc_ seuraavat säännöt (katso lista säännöistä pylintin [dokumentaatiosta](http://pylint.pycqa.org/en/v3.0.2/technical_reference/features.html)):
-
-  - Rivin pituus on maksimissaan 80 merkkiä
-    - Vinkki: sääntö löytyy [Format checker](https://pylint.pycqa.org/en/v3.0.2/user_guide/configuration/all-options.html#format-options) -osiosta ja tulee määrittää `[FORMAT]`-osion alle
-  - Ei yli kahta sisäkkäistä lohkoa (esimerkiksi if- tai for-lohkoa) funktion tai metodin sisällä
-    - Vinkki: sääntö löytyy [Refactoring checker](https://pylint.pycqa.org/en/v3.0.2/user_guide/configuration/all-options.html#refactoring-options) -osiosta ja tulee määrittää `[REFACTORING]`-osion alle)
-  - Funktiossa tai metodissa on enintään 15 lausetta (statements), etsi sääntö dokumentaatiosta
-  - Määrittele myös jokin itse valitsemasi, mielenkiintoiselta/hyödylliseltä kuulostava sääntö
-
-- Muuta koodiasi siten, että saat jokaisen määritellyistä pylint-säännöistä rikkoutumaan
-- Korjaa koodisi ja varmista, että se noudattaa kaikkia sääntöjä
-
-Usein _.pylintrc_-konfiguraatiota ei ole järkevää kirjoittaa tyhjästä käsin, vaan käytetään lähtökohtana pylintin suosittelemaa konfiguraatiota. Suositellun konfiguraation voi tulostaa komentoriville komennolla `pylint --generate-rcfile`.
-
-### 4. Koodin staattinen analyysi ja GitHub Actionit
-
-**Tämä tehtävä tehdään viime viikon tehtävissä 2-13 käytettyyn ohtuvarasto-repositorioon**
-
-Laajenna ohtuvarastosi GitHub Actionien määritelmää siten, että myös Pylint-tarkastukset suoritetaan aina kun koodi pushataan GitHubiin.
-
-Varmista, että GitHub huomaa tilanteen, missä koodi rikkoo projektin Pylint-sääntöjä:
-
-![]({{ "/images/py-lh2-11.png" | absolute_url }})
-
-Varmista myös, että kun korjaat koodin, kaikki toimii taas moitteettomasti:
-
-![]({{ "/images/py-lh2-12.png" | absolute_url }})
-
-### 5. Git: branchit [versionhallinta]
+### 8. Git: branchit [versionhallinta]
 
 **Tätä tehtävää ei palauteta mihinkään**
 
@@ -316,7 +371,7 @@ logger("lopetetaan")
 
 - Katso jälleen miltä näyttää `gitk --all`-komennolla
 
-### 6. Git: branchit ja staging-alue [versionhallinta]
+### 9. Git: branchit ja staging-alue [versionhallinta]
 
 **Tätä tehtävää ei palauteta mihinkään**
 
@@ -392,7 +447,7 @@ nothing to commit, working tree clean
 - Tämän tehtävän ideana oli siis havainnollistaa, että working tree (muutokset joista Git ei ole tietoinen) ja staging (gitiin lisättyihin tiedostoihin tehdyt committoimattomat muutokset)
   **eivät liity** mihinkään branchiin, muutokset siirtyvät staging-alueelta branchiin ainoastaan komennon `git commit` suorituksen seurauksena
 
-### 7. Git: konflikti! [versionhallinta]
+### 9. Git: konflikti! [versionhallinta]
 
 **Tätä tehtävää ei palauteta mihinkään**
 
@@ -526,9 +581,9 @@ Jotkut editorit, esim [Visual Studio Code](https://code.visualstudio.com) sisäl
 
 ![]({{ "/images/lh2-merge.png" | absolute_url }}){:height="350px" }
 
-### 8. Git: branchit ja GitHub [versionhallinta]
+### 10. Git: branchit ja GitHub [versionhallinta]
 
-**Tämä tehtävä tehdään palautusrepositorioon**
+**Tämä tehtävä tehdään palautusrepositorioon. Tekeminen on vapaaehtoista, eikä tehtävää arvostella**
 
 **HUOM** tässä tehtävässä on tunnetusti välillä haastava seurata jokaista askelta siten, että päätyy aina samaan tilaan mitä tehtävä odottaa. Ei kannata stressata tästä liikaa. Pääasia tehtävässä on oppia miten branchit saadaan toimimaan lokaalisti ja GitHubissa siten, että _git push_ ja _git pull_ toimivat kaikille brancheille.
 
@@ -629,7 +684,7 @@ Ohjelmistokehitystiimi voi soveltaa Gitin branchaystä hyvin monella eri tyylill
 
 Jos kiinnostaa, lue lisää yllä olevasta dokumentista.
 
-### 9. Git: epäajantasaisen kloonin pushaaminen [versionhallinta]
+### 11. Git: epäajantasaisen kloonin pushaaminen [versionhallinta]
 
 Demonstroidaan vielä (viime viikon [tehtävässä 11](/tehtavat1#11-github-actions-osa-3) mainittu) usein esiintyvä tilanne, missä epäajantasaisen repositorion pushaaminen GitHubissa olevaan etärepositorioon epäonnistuu.
 
@@ -681,113 +736,4 @@ Voit nyt pullata koodin uudelleen komennolla `git pull`. Komento `git push` onni
 
 - Eli toimi näin ja varmista, että tekemäsi muutokset menevät GitHubiin
 
-### 10. Pelaajalista
 
-Hae [kurssirepositorion]({{site.python_exercise_repo_url}}) hakemistossa _viikko2/nhl-reader_ lähes tyhjä Poetry-projektin runko. Mukana on kohta tarvitsemasi luokka `Player`.
-
-- Kopioi projekti palatusrepositorioosi, hakemiston _viikko2_ sisälle.
-
-Tehdään ohjelma, jonka avulla voi hakea jääkiekon [NHL-liigan](https://nhl.com) eri kausien tilastotietoja.
-
-Näet tilastojen [JSON](https://en.wikipedia.org/wiki/JSON)-muotoisen raakadatan web-selaimella osoitteesta <https://studies.cs.helsinki.fi/nhlstats/2022-23/players>
-
-Tee ohjelma, joka listaa _suomalaisten pelaajien_ tilastot. Tarvitset ohjelmassa yhtä kirjastoa, eli riippuvuutta. Kyseinen kirjasto on [requests](https://pypi.org/project/requests/)-kirjasto, jonka avulla voi tehdä HTTP-pyyntöjä. Huomaa, että Pythonilla on myös valmiita moduuleja tähän tarkoitukseen, mutta requests-kirjaston käyttö on huomattavasti näitä moduuleja helpompaa.
-
-Asenna siis _requests_-kirjasto projektin riippuvuuksiksi. Käytä kirjastosta uusinta versiota (jonka Poetry asentaa automaattisesti).
-
-Voit ottaa projektisi pohjaksi seuraavan tiedoston:
-
-```python
-import requests
-from player import Player
-
-def main():
-    url = "https://studies.cs.helsinki.fi/nhlstats/2022-23/players"
-    response = requests.get(url).json()
-
-    print("JSON-muotoinen vastaus:")
-    print(response)
-
-    players = []
-
-    for player_dict in response:
-        player = Player(player_dict)
-        players.append(player)
-
-    print("Oliot:")
-
-    for player in players:
-        print(player)
-```
-
-Tehtäväpohjassa on valmiina luokan `Player` koodin runko. Edellä esitetyssä koodissa `requests.get(url)` tekee HTTP-pyynnön, jonka jälkeen `json`-metodin kutsu muuttaa JSON-muotoisen vastauksen Python-tietorakenteiksi. Tässä tilanteessa `response` sisältää listan dictionaryja. Tästä listasta muodostetaan lista `Player`-olioita for-silmukan avulla.
-
-Tee `Player`-luokkaan attribuutit kaikille JSON-datassa oleville kentille, joita ohjelmasi tarvitsee. Ohjelmasi voi toimia esimerkiksi niin, että se tulostaisi pelaajat seuraavalla tavalla:
-
-```
-Players from FIN
-
-Erik Haula team NJD  goals 14 assists 27
-Otto Koivula team NYI  goals 0 assists 2
-Robin Salo team NYI  goals 2 assists 2
-Aatu Raty team VAN  goals 2 assists 1
-Niko Mikkola team STL  goals 1 assists 5
-Kaapo Kakko team NYR  goals 18 assists 22
-Rasmus Ristolainen team PHI  goals 3 assists 17
-Mikael Granlund team NSH  goals 10 assists 31
-Kasperi Kapanen team STL  goals 15 assists 19
-Joona Koppanen team BOS  goals 0 assists 1
-Henri Jokiharju team BUF  goals 3 assists 10
-Ukko-Pekka Luukkonen team BUF  goals 0 assists 0
-Joel Armia team MTL  goals 7 assists 7
-...
-```
-
-Tulostusasu ei tässä tehtävässä ole oleellista, eikä edes se mitä pelaajien tiedoista tulostetaan.
-
-### 11. Siistimpi pelaajalista
-
-Tulosta suomalaiset pelaajat pisteiden (goals + assists) mukaan järjestettynä. Tarkka tulostusasu ei ole taaskaan oleellinen, mutta se voi esimerkiksi näyttää seuraavalta:
-
-```
-Players from FIN
-
-Mikko Rantanen       COL  55 + 50 = 105
-Aleksander Barkov    FLA  23 + 55 = 78
-Roope Hintz          DAL  37 + 38 = 75
-Miro Heiskanen       DAL  11 + 62 = 73
-Sebastian Aho        CAR  36 + 31 = 67
-Patrik Laine         CBJ  22 + 30 = 52
-Artturi Lehkonen     COL  21 + 30 = 51
-Matias Maccelli      ARI  11 + 38 = 49
-Jesperi Kotkaniemi   CAR  18 + 25 = 43
-Eetu Luostarinen     FLA  17 + 26 = 43
-Erik Haula           NJD  14 + 27 = 41
-...
-```
-
-- Vinkki 1: voit halutessasi hyödyntää [filter](https://docs.python.org/3/library/functions.html#filter)-funktiota.
-- Vinkki 2: kokeile, mitä `f"{self.name:20}"` tekee merkkijonoesitykselle `Player`-luokan `__str__`-metodissa.
-
-### 12. Pelaajalistan refaktorointi
-
-Tällä hetkellä suurin osa pelaajatietoihin liittyvästä koodista on luultavasti `main`-funktiossa. Funktion _koheesion_ aste on melko matala, koska se keskittyy usean toiminallisuuden toteuttamiseen. Koodi kaipaisi siis pientä refaktorointia.
-
-Jaa toiminallisuuden vastuut kahdelle luokkalle: `PlayerReader` ja `PlayerStats`. `PlayerReader`-luokan vastuulla on hakea JSON-muotoiset pelaajat konstruktorin parametrin kautta annetusta osoitteesta ja muodostaa niistä `Player`-olioita. Tämä voi tapahtua esimerkiksi luokan `get_players`-metodissa. `PlayerStats`-luokan vastuulla on muodostaa `PlayerReader`-luokan tarjoamien pelaajien perusteella erilaisia tilastoja. Tässä tehtävässä riittää, että luokalla on metodi `top_scorers_by_nationality`, joka palauttaa parametrina annettetun kansalaisuuden pelaajat pisteiden mukaan laskevassa järjestyksessä (suurin pistemäärä ensin).
-
-Refaktoroinnin jälkeen `main`-funktion tulee näyttää suurin piirtein seuraavalta:
-
-```python
-def main():
-    url = "https://studies.cs.helsinki.fi/nhlstats/2022-23/players"
-    reader = PlayerReader(url)
-    stats = PlayerStats(reader)
-    players = stats.top_scorers_by_nationality("FIN")
-
-    for player in players:
-        print(player)
-```
-
-Funktion pitäisi tulostaa samat pelaajat samassa järjestyksessä kuin edellisessä tehtävässä.
-
-{% include submission_instructions.md %}
