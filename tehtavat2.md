@@ -22,11 +22,11 @@ Tehtävissä tutustutaan koodin _staattiseen analyysin_ Pylint-työkalun avulla,
 
 Kurssin [kolmannessa osassa](/osa3) teemana on ohjelmien laadun varmistaminen. Eräs ohjelman laatua useimmiten edistävä tekijä on järkevän _koodityylin_ noudattaminen. Koodin tyyliä voidaan tarkkailla automatisoidusti niin sanottujen staattisen analyysin työkaluilla.
 
-Tutustutaan nyt staattisen analyysin työkaluun nimeltään [Pylint](https://pylint.pycqa.org/en/latest/index.html). Ennen kuin syvennymme aiheeseen, tutustu pylintin käyttöön lukemalla kurssilta Ohjelmistotekniikka lainattu [Pylint-ohje](/pylint).
+Tutustutaan nyt staattisen analyysin työkaluun nimeltään [Pylint](https://pylint.pycqa.org/en/latest/index.html). Ennen kuin syvennymme aiheeseen, tutustu pylintin käyttöön lukemalla seuraava [Pylint-ohje](/pylint).
 
 **Mene nyt edellisen viikon varasto-projektiin liittyvien tehtävien palautusrepositorioosi.**
 
-Ota varasto-projektissa käyttöön Pylint noudattamalla lukemiasi ohjeita. Konfiguraationa käytettävän _.pylintrc_-tiedoston sisältö tulee toistaiseksi olla [tämän]({{site.python_exercise_repo_url}}/blob/main/viikko2/varasto/.pylintrc) tiedoston sisällön mukainen.
+Ota varasto-projektissa käyttöön Pylint noudattamalla lukemiasi ohjeita. Konfiguraationa käytettävän _.pylintrc_-tiedoston sisältö tulee toistaiseksi olla [tämän]({{site.python_exercise_repo_url}}/blob/main/osa2/varasto/.pylintrc) tiedoston sisällön mukainen.
 
 Pylintin tarkistamat säännöt konfiguroidaan _.pylintrc_-tiedostoon oikeiden osioiden alle. `[main]`-osio sisältää yleistä konfiguraatio, kuten mitkä hakemistot tai tiedostot pitäisi jättää tarkistuksien ulkopuolelle. `[MESSAGE CONTROL]`-osiossa taas voidaan määritellä esimerkiksi tarkistuksia, joista ei tarvitse huomauttaa. Loput osiot ovat eri sääntöjen konfigurointia varten, jotka on dokumentoitu pylintin [dokumentaatiossa](http://pylint.pycqa.org/en/v3.0.2/technical_reference/features.html). Jos haluamme esimerkiksi asettaa funktioiden ja metodien argumenttien maksimilukumäärään neljään, voimme lisätä sen `[DESIGN]`-osioon seuraavasti:
 
@@ -92,7 +92,7 @@ Tätä tehtävää ei palaute tai arvostella.
 
 ### 4. Riippuvuuksien injektointi osa 1
 
-**Tämä tehtävä tehdään juuri luomaasi palautusrepositorioon, eli EI KÄYTETÄ ohtuvarasto-repositorioa mihin teit tehtävät 2-13**
+**Tämä tehtävä tehdään juuri luomaasi uuteen palautusrepositorioon.**
 
 - tehtävässä ei tosin tehdä itse mitään koodia...
 
@@ -110,11 +110,9 @@ Tutustu riippuvuuksien injektointiin esimerkin avulla. Asenna projektin riippuvu
 
 ### 5. Riippuvuuksien injektointi osa 2: NHL-tilastot
 
-**Myös Tämä tehtävä tehdään juuri luomaasi palautusrepositorioon, eli EI KÄYTETÄ viime viikon ohtuvarasto-repositoriota.**
+**Myös Tämä tehtävä tehdään juuri luomaasi palautusrepositorioon**
 
 - Kurssin [tehtävärepositorion]({{site.python_exercise_repo_url}}) hakemistossa _osa2/nhl-statistics-1_ on ohjelma, jonka avulla on mahdollista tutkia <https://nhl.com>-sivulla olevia tilastotietoja (vaihtamalla sovelluksen käyttämää URL:ia, voit katsoa eri kausien tilastoja)
-  - Kopioi projekti **palautusrepositorion** alle omaksi hakemistoksi
-    - HUOM: nyt EI KÄYTETÄ tehtävien 2-13 ohtuvarasto-repositorioa!
   - Asenna projektin riippuvuudet suorittamalla sen juurihakemistossa komento `poetry install`
 - Ohjelma koostuu kolmesta luokasta.
   - `StatisticsService` on palvelun tarjoava luokka, se tarjoaa metodit yhden pelaajan tietojen näyttämiseen, pistepörssin näyttämiseen ja yhden joukkueen pelaajien tietojen näyttämiseen
@@ -132,7 +130,6 @@ stats = StatisticsService(
   PlayerReader("https://studies.cs.helsinki.fi/nhlstats/2022-23/players.txt")
 )
 ```
-
 
 **HUOM:** jos törmäät virheeseen `URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed`, mahdollinen ratkaisu ongelmaan löytyy [täältä](https://stackoverflow.com/a/42334357).
 
@@ -275,7 +272,7 @@ Development dependencies:
 - requests
 ```
 
-
+** Loput tämän viikon tehtävistä ovat vapaaehtoisia, eikä niitä arvostella. Tehtäviin kannattaa kuitenkin tutustua, erityisesti, jos branchien käyttö Gitissä on yhtään vierasta **
 
 ### 8. Git: branchit [versionhallinta]
 
@@ -447,7 +444,7 @@ nothing to commit, working tree clean
 - Tämän tehtävän ideana oli siis havainnollistaa, että working tree (muutokset joista Git ei ole tietoinen) ja staging (gitiin lisättyihin tiedostoihin tehdyt committoimattomat muutokset)
   **eivät liity** mihinkään branchiin, muutokset siirtyvät staging-alueelta branchiin ainoastaan komennon `git commit` suorituksen seurauksena
 
-### 9. Git: konflikti! [versionhallinta]
+### 10. Git: konflikti! [versionhallinta]
 
 **Tätä tehtävää ei palauteta mihinkään**
 
@@ -581,9 +578,9 @@ Jotkut editorit, esim [Visual Studio Code](https://code.visualstudio.com) sisäl
 
 ![]({{ "/images/lh2-merge.png" | absolute_url }}){:height="350px" }
 
-### 10. Git: branchit ja GitHub [versionhallinta]
+### 11. Git: branchit ja GitHub [versionhallinta]
 
-**Tämä tehtävä tehdään palautusrepositorioon. Tekeminen on vapaaehtoista, eikä tehtävää arvostella**
+**Tämä tehtävä tehdään palautusrepositorioon. Tekeminen on kuitenkin vapaaehtoista, eikä tehtävää arvostella**
 
 **HUOM** tässä tehtävässä on tunnetusti välillä haastava seurata jokaista askelta siten, että päätyy aina samaan tilaan mitä tehtävä odottaa. Ei kannata stressata tästä liikaa. Pääasia tehtävässä on oppia miten branchit saadaan toimimaan lokaalisti ja GitHubissa siten, että _git push_ ja _git pull_ toimivat kaikille brancheille.
 
@@ -684,7 +681,7 @@ Ohjelmistokehitystiimi voi soveltaa Gitin branchaystä hyvin monella eri tyylill
 
 Jos kiinnostaa, lue lisää yllä olevasta dokumentista.
 
-### 11. Git: epäajantasaisen kloonin pushaaminen [versionhallinta]
+### 12. Git: epäajantasaisen kloonin pushaaminen [versionhallinta]
 
 Demonstroidaan vielä (viime viikon [tehtävässä 11](/tehtavat1#11-github-actions-osa-3) mainittu) usein esiintyvä tilanne, missä epäajantasaisen repositorion pushaaminen GitHubissa olevaan etärepositorioon epäonnistuu.
 
