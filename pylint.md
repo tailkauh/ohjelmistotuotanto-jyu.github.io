@@ -4,7 +4,7 @@ permalink: /pylint
 title: Pylint ja koodin staattinen analyysi
 ---
 
-_Tämä ohje on kopio kurssin Ohjelmistotekniikka [Pylint-ohjeesta](https://ohjelmistotekniikka-hy.github.io/python/viikko4#pylint-ja-koodin-laaduun-staattinen-analyysi) ohjeesta muutamin lisäyksin_
+_Tämä ohje on kopio Helsingin yliopiston kurssin Ohjelmistotekniikka Pylint-ohjeesta ohjeesta -  muutamin lisäyksin_
 
 Koodin testauksen lisäksi koodin laadun ylläpitäminen on tärkeää. Laadun ylläpitäminen on mahdollista erilaisilla manuaalisilla menetelmillä, kuten laatuvaatimusten dokumentoinnilla ja koodikatselmoinneilla. Monet manuaaliset laadunhallinnan menetelmät osoittautuvat kuitenkin laajoissa ohjelmistoprojekteissa usein turhan aikaavieviksi ja virhealttiiksi. _Staattinen analyysi_ on menetelmä, jonka avulla koodia voidaan analysoida automatisoidusti ilman, että sitä tarvitsee suorittaa. Staattista analyysia hyödynnetään ohjelmistokehityksessä laajasti mm. ohjelmointivirheiden huomaamiseen ja laatutarkistuksien tekemiseen.
 
