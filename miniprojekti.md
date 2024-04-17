@@ -37,12 +37,12 @@ Seuraavien viikkojen asiakastapaaminen (sprintin katselmointi ja uuden sprintin 
 #### viikko 3 (19.4.)
 
 - Ryhmä muodostuvat/muodostetaan
-- Projektiaihetta esitellään luonnon toisella puoliskolla (tästä tehdään tallenne)
+- Projektiaihetta esitellään alustavasti luennon toisella puoliskolla
 
 #### viikko 4 (22-26.4.)
 
 - Ensimmäinen tapaaminen (varaa tähän poikkeuksellisesti 1h)
-- Vaatimusten alustava kartoitus ja ensimmäisen sprintin suunnittelu
+- Projektin tarkempi esittely ja vaatimusten alustava kartoitus ja ensimmäisen sprintin suunnittelu
 
 #### viikko 5 (29.4.-3.5. - Vappuviikko)
 
