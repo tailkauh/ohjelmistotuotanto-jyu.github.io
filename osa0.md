@@ -45,15 +45,15 @@ Laskuharjoitusten oletettu kuormittavuus on noin 8 tuntia ensimmäisen kolmen vi
 
 Kurssin loppupuolella, viikoilla 4-7 järjestetään _miniprojekti_, eli ryhmässä tehtävä pieni harjoitustyö, jonka pääasiallisena tarkoituksena on projektinhallinnan sekä eräiden laadunhallintatekniikoiden harjoittelu.
 
-Kukin miniprojektiryhmä koostuu 4-6 opiskelijasta, ryhmillä on myös asiakas, jota ryhmä tapaa viikoittain. Ensimmäisellä viikolla asiakastapaamiseen tulee varata 90 minuuttia, jälkimmäisillä 30 minuuttia.
+Kukin miniprojektiryhmä koostuu 4-6 opiskelijasta, ryhmillä on myös asiakas, jota ryhmä tapaa viikoittain. Ensimmäisellä viikolla asiakastapaamiseen tulee varata 60 minuuttia, jälkimmäisillä 30 minuuttia.
 
-Kurssin lopussa on miniprojektien yhteinen 2h kestoinen demotilaisuus.
+Kurssin lopussa on miniprojektien yhteinen demotilaisuus.
 
 Miniprojekteissa työskentelyyn tulee varata yhteensä noin 6 tuntia aikaa viikossa.
 
 _Kurssin läpäisyn edellytyksenä_ on hyväksytysti suoritettu tai hyväksiluettu miniprojekti.
 
-Miniprojektit tapaavat asiakasta kampuksella.
+Miniprojektit tapaavat asiakasta kampuksella. Tarvittaessa tehdään yksi tai kaksi etäryhmää.
 
 
 #### Miniprojektin hyväksilukeminen
@@ -66,14 +66,14 @@ Jos hyväksiluet miniprojektin työkokemuksella, kerro asiasta emailitse (petri
 
 Kurssilta on jaossa yhteensä 40 pistettä, jotka jakautuvat eri komponenttien kesken seuraavasti
 
-- laskarit, 10 pistettä
+- laskarit, 10 pistettä (laskaripisteet skaalataan välille 0-10)
 - miniprojekti 11 pistettä
 - koe 18 pistettä
 - osallistuminen paikan päällä vierailuluennoille 1 piste
 
 Tarkat arvosanarajat päätetään myöhemmin, mutta arvosanaan 1 riittää 20 pistettä.
 
-Läpipääsy edellyttää lisäksi miniprojektin hyväksyttyä suoritusta (tai hyväksilukua) ja vähintään puolia kokeen pisteistä. **Lisäaikaa** kokeeseen haetaan sähköpostilla opettajalta (matti.luukkainen@helsinki.fi).
+Läpipääsy edellyttää lisäksi miniprojektin hyväksyttyä suoritusta (tai hyväksilukua) ja vähintään puolia kokeen pisteistä. **Lisäaikaa** kokeeseen haetaan sähköpostilla opettajalta
 
 Jos hyväksiluet miniprojektin, kokeen ja laskarien pistemääräsi skaalataan kertomalla 40/29:llä ja arvosana määritellään skaalatun pistemäärän perusteella.
 
