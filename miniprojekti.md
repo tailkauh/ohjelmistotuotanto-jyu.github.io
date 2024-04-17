@@ -4,23 +4,12 @@ title: Miniprojekti
 permalink: /miniprojekti/
 ---
 
-### Ajankohtaista
-
-- Loppudemot
-  - ti 12.12. klo 14-16 B123
-  - to 14.12. klo 12-14 B123
-  - Jokainen ryhmä osallistuu yhteen loppudemoon (demoviikolla ei enää pidetä asiakaspalaveria)
-- Varaa ryhmällesi aika [täältä](https://docs.google.com/document/d/1Go-f33LQC1SSZG-CI-04UyTVE84ytfN9HSAHEad3OC0/edit?usp=sharing)
-- Miniprojektin [lopputoimenpiteet](/miniprojektin_arvosteluperusteet/#lopputoimenpiteet)
-- Asiakastapaamisten (30 min) ajankohta palautussovelluksen välilehdeltä [miniproject]({{site.stats_url}}/miniproject)
-- [Arvosteluperusteet](/miniprojektin_arvosteluperusteet/)
-
 ### Johdanto
 
 - Kurssin viikoilla 4-7 tehdään miniprojekti
 - **Kurssin läpipääsy edellyttää hyväksyttyä osallistumista miniprojektiin** tai sen [hyväksilukemista](/osa0#miniprojektin-hyv%C3%A4ksilukeminen)
 
-- Projekti tehdään noin 5-6 hengen ryhmissä
+- Projekti tehdään noin 5 hengen ryhmissä
 - Projektissa ohjelmoidaan jonkin verran, **pääpaino ei ole ohjelmoinnissa** vaan systemaattisen prosessin (tästä lisää myöhemmin) noudattamisessa.
 - **Jokaisen ryhmän jäsenen on tarkoitus tehdä kunkin sprintin aikana töitä noin 6 tuntia projektin eteen**
   - Asiakastapaamisiin menevää aikaa ei lasketa viikoittaiseen työaikaan!
@@ -29,8 +18,9 @@ permalink: /miniprojekti/
 
 ### Ryhmän muodostaminen
 
-- Aloitustilaisuutesi näet [täältä](/ryhmajako/), ryhmäjako tehdään aloitustilaisuudessa Kaikkien ryhmäläisten on **pakko osallistua** tilaisuuteen, jonka kesto on noin 2 tuntia
-- Aloitustilaisuuteen tullessa on syytä tuntea materiaalin osien 1 ja 2 asioista ainakin seuraavat:
+Täytä ryhmien muodostamisessa käytettävä lomaka ennen perjantai 19.4. aamua (klo 9:00). Lomake löytyy [täältä](https://tim.jyu.fi/view/kurssit/tie/tjta330/ohjelmistotuotanto-k2024/ajanvaraus). Ryhmät ja ryhmien tapaamisajat julkaistaan saman päivän luennolla (klo 12-14). Ensimmäiset tapaamiset ovat heti seuraavalla viikolla. Ensimmäinen tapaaminen kestää yhden tunnin (tapaaminen jatkuu puoli tuntia valitsemasi ajan jälkeen) 
+
+- Ensimmäiseen tapaamiseen tullessa on syytä tuntea materiaalin osien 1 ja 2 asioista ainakin seuraavat:
   - Scrum
   - sprintti
   - user story
@@ -44,41 +34,36 @@ permalink: /miniprojekti/
 
 Seuraavien viikkojen asiakastapaaminen (sprintin katselmointi ja uuden sprintin suunnittelu) tapahtuu saman 2h sisällä missä aloitustilaisuus pidetään. Tilaisuuden kesto on 30 minuuttia. Aika kerrotaan palautussovelluksen välilehdeltä [miniproject]({{site.stats_url}}/miniproject)
 
-#### viikko 3 (13-17.11.)
+#### viikko 3 (19.4.)
 
 - Ryhmä muodostuvat/muodostetaan
-- Ryhmät tapaavat asiakkaan aloitustilaisuuksissa
-- Projekti tulee rekisteröidä palautussovellukseen <{{site.stats_url}}>.
-  - **Yksi ryhmäläinen** kirjautuu järjestelmään, menee välilehdelle _miniprojects_
-    - Luo projektin _create project_ -napista avautuvasta lomakkeesta
-    - Ja jakaa muille ryhmäläisille luodun projektin id:n
-  - **Muut ryhmäläiset** kirjautuvat järjestelmään ja liittyvät id:n avulla ryhmään _join project_ -napista avautuvasta lomakkeesta
-  - **Jokaisen ryhmäläisen on oltava rekisteröitynyt projektiin viimeistään ensimmäisen sprintin lopuksi pidettävässä asiakastapaamisessa.**
-    - Ne ryhmäläiset joita ei ole rekisteröity ensimmäisen sprintin asiakastapaamiseen mennessä, eivät saa ryhmälle sprintistä tulevia pisteitä
+- Projektiaihetta esitellään luonnon toisella puoliskolla (tästä tehdään tallenne)
 
-#### viikko 4 (20-24.11.)
+#### viikko 4 (22-26.4.)
+
+- Ensimmäinen tapaaminen (varaa tähän poikkeuksellisesti 1h)
+- Vaatimusten alustava kartoitus ja ensimmäisen sprintin suunnittelu
+
+#### viikko 5 (29.4.-3.5. - Vappuviikko)
 
 - Sprintin 1 katselmointi ja sprintin 2 suunnittelu
 
-#### viikko 5 (27.11-1.12.)
+#### viikko 6 (6-10.5.)
 
 - Sprintin 2 katselmointi ja sprintin 3 suunnittelu
 
-#### viikko 6 (4-8.12.)
+#### viikko 7 (13-17.5.)
 
 - Sprintin 3 katselmointi ja sprintin 4 suunnittelu
 
-#### viikko 7 (11-15.12.)
+#### viikko 7 (20-24.5. - Kurssin viimeinen viikko)
 
-- Loppudemot
-  - ti 12.12. klo 14-16 B123
-  - to 14.12. klo 12-14 B123
-- Jokainen ryhmä osallistuu yhteen loppudemoon
-- Ei erillistä asiakaspalaveria
+- Loppudemot perjantainau
+
 
 ### Toteutettava ohjelmisto
 
-Ohjelman alustava [kuvaus](/speksi), tarkemmat yksityiskohdat kuulet asiakkaalta.
+Esitellään alustavasti perjantain 19.4. luennolla ja tarkemmin ensimmäisessä asikastapaamisessa.
 
 ### Tekniset ja prosessiin liittyvät vaatimukset
 
@@ -99,7 +84,7 @@ Ohjelman alustava [kuvaus](/speksi), tarkemmat yksityiskohdat kuulet asiakkaalta
     - taskin tekijä(t)
 - Ryhmä toteuttaa jatkuvaa integraatiota (continuous integration)
   - Oletusarvoisesti kannattaa käyttää laskareista 1 tuttua GitHub Actionsia
-- Koodi on talletettu GitHubiin
+- Koodi on talletettu GitHubiin (tai muuhun versionhallintaan, jonne asiakkaalla on pääsy)
 - Projektin GitHub-repositoriolla on järkevä README.md
 
 #### Product ja sprint backlog
@@ -115,7 +100,6 @@ Ohjelman alustava [kuvaus](/speksi), tarkemmat yksityiskohdat kuulet asiakkaalta
   - <http://www.mountaingoatsoftware.com/scrum/sprint-backlog> (tämä on sikäli huono, että siitä eivät ilmene taskin tekijät)
 - Backlogit voi tehdä Google Docsin sijaan myös johonkin backlogien ylläpitämiseen tarkoitettuun työkaluun
   - kannattaa varmistaa, että työkalu kuitenkin tukee edellä lueteltuja vaatimuksia
-  - esim. <https://trello.com> ei tue Scrum-tyylisiä backlogeja oikeastaan ollenkaan, ja **Trelloa kannattaakin välttää tässä projektissa**
 
 #### Definition of done
 
@@ -152,17 +136,16 @@ Pitäkää ohjelma koko ajan toimintakykyisenä. On erittäin huono idea koittaa
 
 ### Teknologisia vihjeitä
 
-- Kokonaan uusien teknologioiden opettelu miniprojektin yhteydessä ei ole järkevää
+- Kokonaan uusien teknologioiden opettelu vie aina odotettua enemmän aikaa
 - **Mahdollisten ulkoisten kirjastojen käyttöönotto, testien tekeminen ja CI:n konfigurointi tulee viemään ainakin alussa todella paljon aikaa**
 - Komentoriviltä toimiva sovellus on teknologioiden suhteen riskittömin vaihtoehto
-  - **HUOM:** Komentoriviltä toimivat sovellukset on syytä tehdä siten, että niiden IO-operaatiot eli tulostaminen ja syötteen lukeminen on eriytetty omaan injektoitavaan luokkaan viikon 1 laskareissa käsitellyn [riippuvuuksien injektointi](/riippuvuuksien_injektointi_python/) -esimerkin tapaan. Jos näin ei toimita tulee sprintistä 2 alkaen tehtävä käyttöliittymän läpi tapahtuva testaus olemaan erittäin haastavaa
-- Web-pohjaiselle sovellukselle voi ottaa mallia kurssin [esimerkkisovelluksesta](https://github.com/ohjelmistotuotanto-hy/todo-web)
-- Jos haluatte käyttää tietokantaa, on Tikapestakin tuttu _SQLite_ hyvä vaihtoehto
-  - SQLiten käyttöön Pythonilla löytyy ohjeita ainakin [Ohjelmistotekniikka-kurssin](https://ohjelmistotekniikka-hy.github.io/python/toteutus#tietojen-tallennus) materiaalista
-  - Ohjelmistotekniikka-kurssin [todo-sovellus](https://github.com/ohjelmistotekniikka-hy/python-todo-app) on esimerkkisovellus SQLiten tietokannan käytöstä Python-projektissa
-  - Huomaa, että jos tarkoituksena on julkaista sovellus jossain pilvipalvelussa, SQLiteä parempi vaihtoehto on _PostgreSQL_. Mallia PostgreSQL:n käyttöön Python-sovelluksessa voi ottaa esimerkiksi seuraavasta tälle kurssille tehdystä [esimerkkisovelluksesta](https://github.com/ohjelmistotuotanto-hy/todo-web)
+  - **HUOM:** Komentoriviltä toimivat sovellukset on syytä tehdä siten, että niiden IO-operaatiot eli tulostaminen ja syötteen lukeminen on eriytetty omaan injektoitavaan luokkaan viikon 2 laskareissa käsitellyn [riippuvuuksien injektointi](/riippuvuuksien_injektointi_python/) -esimerkin tapaan. Jos näin ei toimita tulee sprintistä 2 alkaen tehtävä käyttöliittymän läpi tapahtuva testaus olemaan erittäin haastavaa
+- Web-pohjais sovellusta ei suositella, ellei kaikilla ryhmän jäsenillä ole tästä kokemusta.
+- Jos haluatte käyttää tietokantaa, on esim.  _SQLite_ hyvä vaihtoehto
+<!--  - SQLiten käyttöön Pythonilla löytyy ohjeita ainakin [Ohjelmistotekniikka-kurssin](https://ohjelmistotekniikka-hy.github.io/python/toteutus#tietojen-tallennus) materiaalista
+  - Ohjelmistotekniikka-kurssin [todo-sovellus](https://github.com/ohjelmistotekniikka-hy/python-todo-app) on esimerkkisovellus SQLiten tietokannan käytöstä Python-projektissa -->
 - Viikon 3 laskareista kannattaa ottaa mallia Robot Frameworkilla tapahtuvaan storyjen testaamiseen (vaaditaan sprintistä 2 alkaen)
-- Pythonin Tkinter-kirjastolla tehtyjen käyttöliittymien automatisoitu testaaminen on täysi mysteeri, sen takia kannattaanee välttää kirjaston käyttöä
+- Pythonin Tkinter-kirjastolla tehtyjen käyttöliittymien automatisoitu testaaminen hankalaa ja sen takia kannattaanee välttää kirjaston käyttöä
 
 ### Työn arvostelu
 
