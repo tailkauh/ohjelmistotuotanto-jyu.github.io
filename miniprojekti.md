@@ -142,9 +142,8 @@ Pitäkää ohjelma koko ajan toimintakykyisenä. On erittäin huono idea koittaa
   - **HUOM:** Komentoriviltä toimivat sovellukset on syytä tehdä siten, että niiden IO-operaatiot eli tulostaminen ja syötteen lukeminen on eriytetty omaan injektoitavaan luokkaan viikon 2 laskareissa käsitellyn [riippuvuuksien injektointi](/riippuvuuksien_injektointi_python/) -esimerkin tapaan. Jos näin ei toimita tulee sprintistä 2 alkaen tehtävä käyttöliittymän läpi tapahtuva testaus olemaan erittäin haastavaa
 - Web-pohjais sovellusta ei suositella, ellei kaikilla ryhmän jäsenillä ole tästä kokemusta.
 - Jos haluatte käyttää tietokantaa, on esim.  _SQLite_ hyvä vaihtoehto
-<!--  - SQLiten käyttöön Pythonilla löytyy ohjeita ainakin [Ohjelmistotekniikka-kurssin](https://ohjelmistotekniikka-hy.github.io/python/toteutus#tietojen-tallennus) materiaalista
-  - Ohjelmistotekniikka-kurssin [todo-sovellus](https://github.com/ohjelmistotekniikka-hy/python-todo-app) on esimerkkisovellus SQLiten tietokannan käytöstä Python-projektissa -->
-- Viikon 3 laskareista kannattaa ottaa mallia Robot Frameworkilla tapahtuvaan storyjen testaamiseen (vaaditaan sprintistä 2 alkaen)
+  - SQLiten käyttöön Pythonilla löytyy ohjeita ainakin [Web-palvelinohjelmointi-kurssin](https://appro.mit.jyu.fi/ties4080/luennot/sqlite/) materiaalista
+- Kolmansista laskareista kannattaa ottaa mallia Robot Frameworkilla tapahtuvaan storyjen testaamiseen (vaaditaan sprintistä 2 alkaen)
 - Pythonin Tkinter-kirjastolla tehtyjen käyttöliittymien automatisoitu testaaminen hankalaa ja sen takia kannattaanee välttää kirjaston käyttöä
 
 ### Työn arvostelu
