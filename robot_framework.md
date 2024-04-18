@@ -7,9 +7,9 @@ permalink: /robot_framework/
 
 [Robot Framework](https://robotframework.org/) on user storyjen hyväksymistestauksen automatisointiin hyvin soveltuva sovelluskehys. Robot Frameworkin avulla user storyjen testit voidaan kirjoittaa asiakkaan ymmärtämässä muodossa, luonnollisella kielellä, mutta tehdä niistä kuitenkin automaattisesti suoritettavia.
 
-Vaikka Robot Framework on perinteisesti tarkoitettu koko ohjelmiston "end-to-end"-testaukseen, tarkastellaan ensin Robot Frameworkin toimintaperiaatteita testaamalla yksittäistä luokkaa. Hae [kurssirepositorion](https://github.com/ohjelmistotuotanto-hy/tehtavat/tree/main/viikko3/hello-robot) hakemistossa _koodi/viikko3/hello-robot_ oleva projekti.
+Vaikka Robot Framework on perinteisesti tarkoitettu koko ohjelmiston "end-to-end"-testaukseen, tarkastellaan ensin Robot Frameworkin toimintaperiaatteita testaamalla yksittäistä luokkaa. Hae [kurssirepositorion](https://github.com/ohjelmistotuotanto-jyu/tehtavat/tree/main/osa3/hello-robot) hakemistossa _koodi/viikko3/hello-robot_ oleva projekti.
 
-- Kopioi projekti palatusrepositorioosi, hakemiston _viikko3_ sisälle.
+- Kopioi projekti palatusrepositorioosi, hakemiston _osa3_ sisälle.
 
 Testattavana on yksinkertainen laskuri:
 

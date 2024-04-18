@@ -99,7 +99,7 @@ Kuten kohta tulemme näkemään, ohjelmistotuotanto kattaa suuren kirjon erilais
 ## Typoja materiaalissa
 
 Kun huomaat kurssimateriaalissa kirjoitusvirheitä, tee korjausehdotus. Kurssimateriaali on repositoriossa
-[https://github.com/ohjelmistotuotanto-jyu/ohjelmistotuotanto-jyu.github.io](https://github.com/ohjelmistotuotanto-jyu/ohjelmistotuotanto-jyu.github.io) tiedostoissa [osa0.md](https://github.com/ohjelmistotuotanto-hy/ohjelmistotuotanto-hy.github.io/blob/master/osa0.md) jne.
+[https://github.com/ohjelmistotuotanto-jyu/ohjelmistotuotanto-jyu.github.io](https://github.com/ohjelmistotuotanto-jyu/ohjelmistotuotanto-jyu.github.io) tiedostoissa [osa0.md](https://github.com/ohjelmistotuotanto-jyu/ohjelmistotuotanto-jyu.github.io/blob/master/osa0.md) jne.
 
 Muutosehdotuksen tekeminen aloitetaan painamalla tiedoston _kynä-symbolia_:
 
