@@ -11,7 +11,6 @@ permalink: /osa3/
   />
 </a>
 
-{% include paivitys_kesken.md %}
 
 Tässä osassa tutustumme ohjelmistojen laadunhallintaan ja erityisesti ketterien menetelmien suosimiin testauksen ja laadunhallinnan menetelmiin.
 
