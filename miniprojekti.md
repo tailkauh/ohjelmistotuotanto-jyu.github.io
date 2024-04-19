@@ -30,6 +30,10 @@ Täytä ryhmien muodostamisessa käytettävä lomaka ennen perjantai 19.4. aamua
   - definition of done
 - Tämä dokumentti ja miniprojektin [arvosteluperusteet](/miniprojektin_arvosteluperusteet) on myös syytä lukea huolellisesti ennen aloitustilaisuutta
 
+### Hankkeen alustava kuvaus
+
+[kuvaus](/speksi/)
+
 ### Työn eteneminen
 
 Seuraavien viikkojen asiakastapaaminen (sprintin katselmointi ja uuden sprintin suunnittelu) tapahtuu saman 2h sisällä missä aloitustilaisuus pidetään. Tilaisuuden kesto on 30 minuuttia. 

@@ -7,7 +7,7 @@ permalink: /speksi/
 
 ## Taustaa
 
-Kandiopiskelijat Riku ja Ville tarvitsevat järjestelmän, joka auttaa heitä pitämään kanditöiden kirjoittamisessa käytetyt lähdeviitteet järjestyksessä ja sopivassa muodossa kandia varten. Kuten kaikki TKT:n opiskelijat, myös Riku ja Ville kirjoittavat kandin [LaTeX](https://www.latex-project.org/):illa.
+Kandiopiskelijat Riku ja Ville tarvitsevat järjestelmän, joka auttaa heitä pitämään kanditöiden kirjoittamisessa käytetyt lähdeviitteet järjestyksessä ja sopivassa muodossa kandia varten. Kuten kaikki valveutuneet tietojenkäsittelyn opiskelijat, myös Riku ja Ville kirjoittavat kandin [LaTeX](https://www.latex-project.org/):illa.
 
 LaTeX:ia käytettäessä teksti näyttää seuraavalta:
 
