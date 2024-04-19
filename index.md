@@ -16,9 +16,7 @@ Kurssin opetusjärjestelyt ja arvosteluperusteet on kuvattu [osassa 0](/osa0), l
 - Kurssiin liittyvää keskustelua: <https://discord.gg/2zD6NzpDbX>
 - Jatkuva kurssipalaute: <https://forms.office.com/e/m6iaUBkdMc>
 
-## Ajankohtaista
 
-{% include ajankohtaista.md path="/index.md" %}
 
 
 ## Kurssimateriaalin tekijä ja lisenssi
