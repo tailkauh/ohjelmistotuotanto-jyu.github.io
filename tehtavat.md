@@ -30,21 +30,21 @@ Tehtävien vaikutus kurssin arvosteluun selviää [osasta 0](/osa0#kurssin-arvos
 - [teoriatehtävät](https://tim.jyu.fi/view/kurssit/tie/tjta330/ohjelmistotuotanto-k2024/tehtavat/teoriatehtavat-osa-2) deadline 21.4 23:59
 - [ohjelmointi/versionhallinta/konfigurointitehtävät](/tehtavat2) [deadline 22.4 23:59](https://tim.jyu.fi/view/kurssit/tie/tjta330/ohjelmistotuotanto-k2024/tehtavat/konfigurointitehtavat-osa-2) 
 
-### Viikko 4
+### Viikko 4 (palautus vasta vapun jälkeen perjantaina)
 
-- teoriatehtävät
-- konfigurointitehtävät
+- teoriatehtävät deadline 3.5. 23:59 
+- [ohjelmointi/versionhallinta/konfigurointitehtävät](tehtavat3) deadline 3.5. 23:59 
 - miniprojekti
 
 ### Viikko 5 (Vappuviikko)
 
 - teoriatehtävät
-- konfigurointitehtävät
+- [ohjelmointi/versionhallinta/konfigurointitehtävät](tehtavat4) deadline 5.5. 23:59  
 - miniprojekti 
 
 ### Viikko 6
 
-- konfigurointitehtävät
+- [ohjelmointi/versionhallinta/konfigurointitehtävät](tehtavat5) deadline 12.5. 23:59 
 - miniprojekti
 
 ### Viikko 7
