@@ -33,18 +33,18 @@ Tehtävien vaikutus kurssin arvosteluun selviää [osasta 0](/osa0#kurssin-arvos
 ### Viikko 4 (palautus vasta vapun jälkeen perjantaina)
 
 - teoriatehtävät deadline 3.5. 23:59 
-- [ohjelmointi/versionhallinta/konfigurointitehtävät](tehtavat3) deadline 3.5. 23:59 
+- [ohjelmointi/versionhallinta/konfigurointitehtävät](/tehtavat3) deadline 3.5. 23:59 
 - miniprojekti
 
 ### Viikko 5 (Vappuviikko)
 
 - teoriatehtävät
-- [ohjelmointi/versionhallinta/konfigurointitehtävät](tehtavat4) deadline 5.5. 23:59  
+- [ohjelmointi/versionhallinta/konfigurointitehtävät](/tehtavat4) deadline 5.5. 23:59  
 - miniprojekti 
 
 ### Viikko 6
 
-- [ohjelmointi/versionhallinta/konfigurointitehtävät](tehtavat5) deadline 12.5. 23:59 
+- [ohjelmointi/versionhallinta/konfigurointitehtävät](/tehtavat5) deadline 12.5. 23:59 
 - miniprojekti
 
 ### Viikko 7
