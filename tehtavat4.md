@@ -5,9 +5,6 @@ inheader: no
 permalink: /tehtavat4/
 ---
 
-{% include miniprojekti_ilmo.md %}
-
-{% include laskari_info.md part=4 %}
 
 Tehtävissä tutustutaan riippuvuuksien "mockaamiseen" yksikkötesteissä. 
 

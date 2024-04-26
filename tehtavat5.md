@@ -5,10 +5,6 @@ inheader: no
 permalink: /tehtavat5/
 ---
 
-{% include miniprojekti_ilmo.md %}
-
-{% include laskari_info.md part=5 %}
-
 Tehtävät liittyvät materiaalin ohjelmistosuunnittelua käsittelevän [osan 4](/osa4/) niihin lukuihin, joihin on merkitty <span style="color:blue">[viikko 5]</span>.
 
 ### Typoja tai epäselvyyksiä tehtävissä?
