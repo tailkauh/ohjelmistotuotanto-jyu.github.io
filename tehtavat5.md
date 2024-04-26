@@ -9,9 +9,7 @@ permalink: /tehtavat5/
 
 {% include laskari_info.md part=5 %}
 
-Tehtävissä 1-2 jatketaan Gitin harjoittelua. Tehtävät 1 ja 2 eivät näy palautuksissa mitenkään.
-
-Tehtävät 3-6 liittyvät materiaalin ohjelmistosuunnittelua käsittelevän [osan 4](/osa4/) niihin lukuihin, joihin on merkitty <span style="color:blue">[viikko 5]</span>.
+Tehtävät liittyvät materiaalin ohjelmistosuunnittelua käsittelevän [osan 4](/osa4/) niihin lukuihin, joihin on merkitty <span style="color:blue">[viikko 5]</span>.
 
 ### Typoja tai epäselvyyksiä tehtävissä?
 
@@ -21,52 +19,8 @@ Tehtävät 3-6 liittyvät materiaalin ohjelmistosuunnittelua käsittelevän [osa
 
 {% include poetry_ongelma.md %}
 
-### Tehtävien palauttaminen
+**Tehtävät palautetaan** jo edellisillä viikoilla käyttämääsi **palautusrepositorioon**, sinne tehtävän hakemiston _osa5_ sisälle.
 
-Tehtävät palautetaan GitHubiin, sekä merkitsemällä tehdyt tehtävät palautussovellukseen <{{site.stats_url}}> välilehdelle "my submission".
-
-**Tämän viikon tehtävät 3-6 palautetaan** jo edellisillä viikoilla käyttämääsi **palautusrepositorioon**, sinne tehtävän hakemiston _viikko5_ sisälle.
-
-Katso tarkempi ohje palautusrepositoriota koskien [täältä](/tehtavat1#teht%C3%A4vien-palautusrepositoriot).
-
-### 1. Git: vahingossa tuhotun tiedoston palautus [versionhallinta]
-
-Viikon 4 [tehtävässä 6](/tehtavat4/#6-git-tägit-versionhallinta) palasimme jo menneisyyteen checkouttaamalla tagillä merkittyyn kohtaan. Katsotaan nyt miten voimme palauttaa jonkun menneisyydessä olevan tilanteen uudelleen voimaan.
-
-Voit tehdä tämän ja seuraavan tehtävän mihin tahansa repositorioon, tehtävät eivät näy palautuksissa.
-
-- Tee jokin tiedosto, esim. nimeltään _important.txt_, lisää ja committaa se
-- Poista tiedosto ja committaa
-- Tee jotain muutoksia johonkin tiedostoon ja committaa
-- Historiasi näyttää seuraavalta
-
-```
-(1) - (2) - (3)
-```
-
-- Nykyhetki eli HEAD on (3). Commitissa (1) tiedosto _important.txt_ on olemassa ja (2):ssa important.txt:ää ei ole.
-  - Huom: komennolla <code>gitk</code> voit tutkia historiaa
-- Haluamme palauttaa tiedoston
-- Selvitä sen commitin id, jossa tiedosto vielä on olemassa, tämä onnistuu gitk:lla tai <code>git log</code> -komennolla
-- Anna komento <code>git checkout 3290b03cea08af987ee7ea57bb98a4886b97efe0 -- important.txt</code> missä pitkä merkkijono on siis kyseisen commitin id
-  - varmista että tiedosto on ilmestynyt staging-alueelle komennolla <code>git status</code>
-- Tee commit
-- _important.txt_ on palannut!
-- Huom: koko id:tä ei komennossa tarvitse antaa, riittää antaa alusta niin monta merkkiä, että niiden perusteella id voidaan päätellä yksikäsitteisesti repositoriosi historiassa
-
-  - "Generally, eight to ten characters are more than enough to be unique within a project. For example, as of October 2017, the Linux kernel (which is a fairly sizable project) has over 700,000 commits and almost six million objects, with no two objects whose SHA-1s are identical in the first 11 characters." [7.1 Git Tools - Revision Selection
-    ](https://git-scm.com/book/en/v2/Git-Tools-Revision-Selection#Short-SHA-1)
-
-- Täsmälleen samalla tavalla onnistuu olemassa olevan tiedoston vanhan version palauttaminen.
-
-### 2. Git: commitin muutosten kumoaminen [versionhallinta]
-
-- Huomaamme, että juuri tehty commit oli virhe, kumotaan se sanomalla <code>git revert HEAD --no-edit</code>
-  - HEAD siis viittaa siihen committiin, jonka kohdalla nyt ollaan
-- Syntyy uusi commit, jossa edellisessä tehdyt muutokset on kumottu
-  - Ilman optiota **no-edit** pääset editoimaan kumoamiseen liittyvään commitiin tulevaa viestiä
-  - Huom: sanomalla <code>git checkout HEAD^</code> pääsemme takaisin kumottuun tilanteeseen, eli mitään ei ole lopullisesti kadotettu
-- Vastaavalla tavalla voidaan kumota, eli revertata mikä tahansa commit, eli: <code>git revert kumottavancommitinid</code>
 
 ### 3. Tenniksen pisteenlaskun refaktorointi
 
@@ -226,51 +180,7 @@ Laajenna ohjelmaasi siten, että se mahdollistaa mielivaltaisen määrän peräk
 
 Myös esim. seuraavanlaisen monimutkaisemman operaatiosarjan pitää toimia oikein: Summa 10, Erotus 6, Erotus 2, Kumoa (kumoaa komennon Erotus 2), Summa 4, Kumoa (Kumoaa komennon Summa 4), Kumoa (kumoaa komennon Erotus 6), Kumoa (kumoaa komennon Summa 10)
 
-### 6. IntJoukon testaus ja siistiminen
+### Tehtävien palauttaminen
 
-[Kurssirepositorion]({{site.python_exercise_repo_url}}) hakemistossa _viikko5/int-joukko_ on alun perin Javalla tehty, mutta nyt Pythoniksi alkuperäiselle tyylille uskollisena käännetty aloittelevan ohjelmoijan ratkaisu syksyn 2011 Ohjelmoinnin jatkokurssin [viikon 2 tehtävään 3](http://www.cs.helsinki.fi/u/wikla/ohjelmointi/jatko/s2011/harjoitukset/2/). 
-- Kopioi projekti palatusrepositorioosi, hakemiston viikko5 sisälle.
+Pushaa kaikki tekemäsi tehtävät ja GitHubiin palautusrepositorioosi ja merkkaa tekemäsi tehtävät [Timiin](https://tim.jyu.fi/view/kurssit/tie/tjta330/ohjelmistotuotanto-k2024/tehtavat/konfigurointitehtavat-osa-5)
 
-Kyseinen opiskelija on edennyt urallaan pitkälle, hän on työskennellyt mm. Googlella ja useassa korkean profiilin Piilaakson start upissa.
-
-Koodi simuloi vanhanaikaista ohjelmointikieltä kuten C:tä missä ei ole Pythonin listan tapaista valmista tietorakennetta, vaan ainoastaan listoja, joiden koko on kiinteä, ja joka määritellään listan luomishetkellä. Koodissa listan luominen tapahtuu metodilla `_luo_lista`:
-
-```python
-class IntJoukko:
-    # tämä metodi on ainoa tapa luoda listoja
-    def _luo_lista(self, koko):
-        return [0] * koko
-
-    def __init__(self, kapasiteetti=None, kasvatuskoko=None):
-        # ...
-        
-        # luodaan lista, jolla haluttu kapasiteetti
-        self.ljono = self._luo_lista(self.kapasiteetti)
-        self.alkioiden_lkm = 0
-```
-
-Kun joukkoon lisätään riittävä määrä uusia lukuja, tulee eteen tilanne, että joukon sisäistä listaa on kasvatettava. Tämä tapahtuu luomalla uusi lista metodilla `_luo_lista`:
-
-```python
-    def lisaa(self, n):
-        # ...
-                
-        # ei enää tilaa, luodaan uusi lista lukujen säilyttämiseen
-        self.ljono = self._luo_lista(self.alkioiden_lkm + self.kasvatuskoko)
-
-```
-
-Koodi jättää hieman toivomisen varaa sisäisen laatunsa suhteen. Refaktoroi luokan `IntJoukko` koodi mahdollisimman siistiksi:
-
-- Poista copypaste
-- Vähennä monimutkaisuutta
-- Anna muuttujille selkeät nimet
-- Tee metodeista pienempiä ja hyvän koheesion omaavia
-
-Ratkaisusi tulee toimia siten, että edelleen joukon sisäisen listan koko on kiinteä, ja lista luodaan metodilla `_luo_lista`, eli jos lista täyttyy, luodaan uusi lista metodin avulla.
-
-Koodissa on joukko yksikkötestejä, jotka helpottavat refaktorointia.
-
-**HUOM:** Suorita refaktorointi mahdollisimman pienin askelin, pidä koodi koko ajan toimivana. Suorita testit jokaisen refaktorointiaskeleen jälkeen!
-
-{% include submission_instructions.md %}
