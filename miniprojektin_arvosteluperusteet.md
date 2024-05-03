@@ -65,12 +65,114 @@ Pisteitä kertyy seuraavista asioista:
   - Katselmoinnin aikana asiakkaalle demonstroidaan ne sprinttiin valitut user storyt jotka on toteutettu hyväksymiskriteerien mukaisesti
 
 Sprintin maksimi on 2.5 pistettä.
+
 ### Toisen sprintin arvosteluperusteet
-TODO
-### Toisen sprintin arvosteluperusteet
-TODO
+
+Pisteitä kertyy seuraavista asioista:
+
+- (0.25p) product backlog
+  - Backlog on DEEP (storyjä ei tarvitse estimoida)
+- (0.25p) sprintin 2 backlog
+  - Sprintiin valitut user storyt jaettu teknisen tason taskeiksi
+  - Päivittäinen jäjellä oleva työmäärä arvioitu taskeittain
+  - Burndown-käyrä olemassa
+  - Jokaiseen taskiin on merkitty sen tekijä(t)
+- (0.25p) sprintiin 2 valittujen storyjen hyväksymisehdot kirjattu
+- (0.25p) kattavahko automatisoitu testaus yksikkötasolla
+- (0.25p) ainakin osa storeista testattu storytasolla (Robot-frameworkilla)
+- (0.25p) jatkuva integraatio
+  - CI-palvelu suorittaa testit
+  - main-branch ei ole hajonnut
+- (0.125p) GitHubin README:stä linkki testikattavuusraporttiin
+- (0.25p) projektille määritelty järkevät Pylint-säännöt jotka tarkistetaan CI:n toimesta
+- (0.25p) suurin osa sprintin user storyistä toteutettu definition of donen mukaisella tasolla
+- (0.125p) toimivasta, demossa näytettävästä versiosta on luotu GitHubiin [release](https://help.github.com/articles/creating-releases/).
+- (0.25p) sprintin katselmointiin on valmistauduttu asiallisesti
+  - Katselmoinnin pitää eri henkilö, kuin edellisessä katselmoinnissa
+  - Katselmoinnin pitäjä on sovittu ja tarvittavat esivalmistelut on tehty etukäteen
+  - Katselmoinnin aikana asiakkaalle näytetään, että jokainen sprinttiin valittu user story on toteutettu hyväksymiskriteerien mukaisesti
+- **Pitäkää sprintin päätteeksi retrospektiivi**, pisteet retrospektiivista annetaan sprintin 3 arvostelussa, ks ohje alta
+
+Sprintin maksimi on 2.5 pistettä.
+
+#### Retrospektiivi
+
+- Sprintin 2 päätteeksi tulee pitää retrospektiivi
+- Muutama ohje retrospektiivin pitämiseen [täällä](/tehtavat4/#5-retrospektiivitekniikat)
+- Retrospektiivista tulee kirjoittaa lyhyet muistiinpanot projektin repositorion juureen laitettavaan tiedostoon `retro.md`
+- Retrospektiivissa havaituista asioista tulee identifioida vähintään kaksi _kehitystoimenpidettä_, eli asiaa joissa tiimi yrittää parantaa toimintaa seuraavassa sprintissä
+  - kehitystoimenpiteet pitää kirjata retrospektiivin muistiinpanoihin
+
+### Kolmannen sprintin arvosteluperusteet
+
+Pisteitä kertyy seuraavista asioista:
+
+- (0.25p) product backlog
+  - Backlog on DEEP (storyjä ei tarvitse estimoida)
+  - Backlogiin ei jää sinne kuulumatonta roskaa, storyjen statukset on kirjattu oikein, jne...
+- (0.25p) sprintiin 3 valittujen storyjen hyväksymisehdot kirjattu Robot Framework -tiedostoihin
+  - Hyväksymisehtoja **ei kirjoteta erikseen backlogiin**, vaan backlogista on linkki hyväksymistestin tiedostoon
+- (0.25p) sprintin 3 backlog
+  - Vaatimukset kuten edellisissä sprinteissä
+- (0.25p) kattavahko testaus yksikkötasolla
+- (0.25p) kattavahko testaus storytasolla
+  - testit toimivat vähintään lokaalisti suoritettaessa
+- (0.25p) jatkuva integraatio
+  - CI-palvelu suorittaa yksikkö- ja storytestit ja PyLintin
+  - main-branch ei ole hajonnut kuin korkeintaan noin 25% sprintin commiteista 
+- (0.125p) GitHubin README:stä linkki testikattavuusraporttiin
+- (0.25p) [Retrospektiivi](/miniprojektin_arvosteluperusteet/#retrospektiivi) on pidetty sprintin 2 lopussa ja siitä on tehty asialliset muistiinpanot
+- (0.25p) suurin osa sprintin user storyistä toteutettu definition of donen mukaisella tasolla
+- (0.125p) toimivasta, demossa näytettävästä versiosta on luotu GitHubiin [release](https://help.github.com/articles/creating-releases/).
+- (0.125p) Ohjelmalle on valittu sopiva lisenssi, ja määritely se repositorioon
+  - Lue [täältä](/lisenssit/) enemmän ohjelmistolisensseistä
+- (0.125p) sprintin katselmointiin on valmistauduttu asiallisesti
+  - Katselmoinnin pitää eri henkilö, kuin edellisessä katselmoinnissa
+  - Katselmoinnin pitäjä on sovittu ja tarvittavat esivalmistelut on tehty etukäteen
+  - Katselmoinnin aikana asiakkaalle näytetään, että jokainen sprinttiin valittu user story on toteutettu hyväksymiskriteerien mukaisesti
+  - Katselmoinnissa sovellus näytetään videotykillä. Koneen kytkemistä videotykkiin **tulee harjoitella** etukäteen, esim. näyttö tulee olla valmiiksi konfiguroida oikein (display mirroring) tai konfiguraatio tulee osata tehdä maksimissaan viidessä sekunnissa
+
+Sprintin maksimi on 2.5 pistettä.
+
 ### Neljännen sprintin arvosteluperusteet
-TODO
+
+Pisteitä kertyy seuraavista asioista:
+
+- (0.25p) product backlog
+  - Backlog on DEEP (storyjä ei tarvitse estimoida)
+  - Backlogiin ei jää sinne kuulumatonta roskaa, storyjen statukset on kirjattu oikein, jne...
+- (0.25p) sprintiin 4 valittujen storyjen hyväksymisehdot kirjattu Robot Framework -tiedostoihin
+  - Hyväksymisehtoja ei kirjoteta erikseen backlogiin, vaan backlogista on linkki hyväksymistestin tiedostoon
+- (0.25p) sprintin 4 backlog
+  - Vaatimukset kuten edellisissä sprinteissä
+- (0.25p) kattavahko testaus yksikkötasolla
+  - kattavuusraportti README-tiedostossa
+- (0.25p) kattavahko testaus storytasolla
+  - testit toimivat vähintään lokaalisti suoritettaessa
+- (0.25p) jatkuva integraatio
+  - CI-palvelu suorittaa yksikkö- ja storytestit sekä Pylintin
+  - main-branch ei ole hajonnut kuin korkeintaan noin 25% sprintin commiteista 
+- (0.25p) suurin osa sprintin user storyistä toteutettu definition of donen mukaisella tasolla
+- (0.25p) [Retrospektiivi](/miniprojektin_arvosteluperusteet/#retrospektiivi) on pidetty sprintin 3 lopussa, toimintaa kehitetty
+  - edellisestä retrospektiivistä on tehty asialliset muistiinpanot
+  - tiimi on kehittänyt toimintaansa, parantamalla edellisessä retrospektiivissa identifioituja ongelmakohtia 
+- (0.25p) Koodin sisäinen laatu on kohtuullisella tasolla
+  - koodi on jaoiteltu järkevästi tiedostoihin ja hakemistoihin
+  - koodissa käytetään järkevää nimentää 
+  - koodissa ei ole liikaa ilmeistä copypastea
+  - koodissa ei ole sinne kuulumatonta roskaa, esim. pois kommentoitua koodia
+- (0.25p) loppudemoon on valmistauduttu asiallisesti (valmistautuminen arvioidaan sen perusteella miten demo menee)
+  - Kone osataan kytkeä videotykkiin nopeasti (5 sekunnissa) siten, että näyttö on konfiguroitu oikein
+  - Sovittu etukäteen kuka tekee mitäkin
+  - Mietitty mitä esitetään
+    - Kannattaa esitellä tärkein toiminnallisuus, aikaa demossa on vähän joten ei kannata rönsyillä
+  - Testidata on järkevää
+    - tietokanta ei saa olla etukäteen tyhjä
+    - tietokannassa oleva data ja demottaessa käytettävät syötteet järkeviä, eli _ei_ esimerkiksi _12345_, _asdf_, _nimi1_, _nimi2_
+  - **Lue viimeinen bullet uudelleen** jostain syystä se jää 25% huomaamatta...
+
+Sprintin maksimi on 2.5 pistettä.
+
 
 ### Lopputoimenpiteet
 
