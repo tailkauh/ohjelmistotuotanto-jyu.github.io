@@ -28,7 +28,7 @@ Kurssi koostuu kolmesta komponentista, luennoista, laskuharjoituksista ja minipr
 
 ### Luennot
 
-Kurssilla on 10 luentoa sekä neljä vierailuluentoa. Luennoilla käydään pääasiassa läpi ohjelmistotuotantoon liittyvää käsitteistöä ja teoriaa, samaa asiaa mihin tämä materiaali keskittyy.
+Kurssilla on 11 luentoa sekä yksi vierailuluentokerta. Luennoilla käydään pääasiassa läpi ohjelmistotuotantoon liittyvää käsitteistöä ja teoriaa, samaa asiaa mihin tämä materiaali keskittyy.
 
 
 ### Laskuharjoitukset
@@ -69,7 +69,7 @@ Kurssilta on jaossa yhteensä 40 pistettä, jotka jakautuvat eri komponenttien k
 - laskarit, 10 pistettä (laskaripisteet skaalataan välille 0-10)
 - miniprojekti 11 pistettä
 - koe 18 pistettä
-- osallistuminen paikan päällä vierailuluennoille 1 piste
+- osallistuminen paikan päällä vierailuluennoille 3 pistettä
 
 Tarkat arvosanarajat päätetään myöhemmin, mutta arvosanaan 1 riittää 20 pistettä.
 
