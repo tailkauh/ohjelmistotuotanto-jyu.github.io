@@ -28,7 +28,7 @@ Kurssi koostuu kolmesta komponentista, luennoista, laskuharjoituksista ja minipr
 
 ### Luennot
 
-Kurssilla on 11 luentoa sekä yksi vierailuluentokerta. Luennoilla käydään pääasiassa läpi ohjelmistotuotantoon liittyvää käsitteistöä ja teoriaa, samaa asiaa mihin tämä materiaali keskittyy.
+Kurssilla on 11 luentoa sekä vähintään yksi vierailuluentokerta. Luennoilla käydään pääasiassa läpi ohjelmistotuotantoon liittyvää käsitteistöä ja teoriaa, samaa asiaa mihin tämä materiaali keskittyy.
 
 
 ### Laskuharjoitukset
@@ -36,7 +36,7 @@ Kurssilla on 11 luentoa sekä yksi vierailuluentokerta. Luennoilla käydään p�
 Kurssiin liittyy viikoittaiset laskuharjoitukset. Tehtäviä harjoituksissa on kahden tyyppisiä.
 
 Luennoilla ja tässä materiaalissa käytävää teoriaa kertaavat _viikoittaiset_ tehtävien (monivalintoja tai lyhyitä pohdintatehtäviä) deadline on sunnuntaina klo 23.59.
-Toinen osa tehtävistä käsittelee ohjelmistotuotantoon liittyviä teknisempiä asioita, kuten versionhallintaa, testaamista ja ohjelmistojen konfigurointia, näiden deadline on _maanantaina klo 23:59_. Tehtävien ohjelmointikieli on Python.
+Toinen osa tehtävistä käsittelee ohjelmistotuotantoon liittyviä teknisempiä asioita, kuten versionhallintaa, testaamista ja ohjelmistojen konfigurointia, näiden deadline on _tiistaina klo 23:59_. Tehtävien ohjelmointikieli on Python.
 
 Laskuharjoitusten oletettu kuormittavuus on noin 8 tuntia ensimmäisen kolmen viikon aikana ja 4 tuntia jälkimmäisinä viikkoina. Teoriatehtäviin vastaaminen on suhteellisen nopeaa, mutta järkevästi vastaaminen edellyttää osallistumista luennoille ja/tai viikon materiaalin lukemista.
 
@@ -60,11 +60,11 @@ Miniprojektit tapaavat asiakasta kampuksella. Tarvittaessa tehdään yksi tai ka
 
 Miniprojektiin osallistuminen ei ole välttämätöntä, jos sinulla on vähintään _kolmen kuukauden työkokemus_ ohjelmistokehitystiimissä toimimisesta.
 
-Jos hyväksiluet miniprojektin työkokemuksella, kerro asiasta emailitse (petri.j.ihantola@jyu.fi) siinä vaiheessa kun olet tehnyt ensimmäiset tehtävät (viikon 2 jälkeen).
+Jos hyväksiluet miniprojektin työkokemuksella, kerro asiasta emailitse (petri.j.ihantola@jyu.fi) siinä vaiheessa kun olet tehnyt ensimmäiset tehtävät (viikolla 2).
 
 ### Kurssin arvostelu
 
-Kurssilta on jaossa yhteensä 40 pistettä, jotka jakautuvat eri komponenttien kesken seuraavasti
+Kurssilta on jaossa yhteensä 40 pistettä, jotka jakautuvat eri komponenttien kesken seuraavasti (alustava)
 
 - laskarit, 10 pistettä (laskaripisteet skaalataan välille 0-10)
 - miniprojekti 11 pistettä
@@ -73,9 +73,8 @@ Kurssilta on jaossa yhteensä 40 pistettä, jotka jakautuvat eri komponenttien k
 
 Tarkat arvosanarajat päätetään myöhemmin, mutta arvosanaan 1 riittää 20 pistettä.
 
-Läpipääsy edellyttää lisäksi miniprojektin hyväksyttyä suoritusta (tai hyväksilukua) ja vähintään puolia kokeen pisteistä. **Lisäaikaa** kokeeseen haetaan sähköpostilla opettajalta
+Läpipääsy edellyttää lisäksi miniprojektin hyväksyttyä suoritusta (tai hyväksilukua) ja vähintään puolia kokeen pisteistä. 
 
-Jos hyväksiluet miniprojektin, kokeen ja laskarien pistemääräsi skaalataan kertomalla 40/29:llä ja arvosana määritellään skaalatun pistemäärän perusteella.
 
 
 ### Luennot - laskuharjoitukset - miniprojekti
