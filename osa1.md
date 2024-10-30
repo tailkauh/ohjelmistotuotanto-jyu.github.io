@@ -124,7 +124,7 @@ Syntyi idea siitä, että _code'n'fix_ -mentaliteetin sijaan ohjelmistojen kehit
 
 ### Vesiputous- eli lineaarinen malli
 
-Winston Roycen vuonna 1970 julkaisema artikkeli [Management of the development of Large Software](http://www-scf.usc.edu/~csci201/lectures/Lecture11/royce1970.pdf) pohdiskelee isojen ohjelmistojen kehittämiseen liittyvää problematiikkaa. Artikkelin sivulla 2 Royce esittelee yksinkertaisen _prosessimallin_ (eli ohjeiston työvaiheiden jaksottamiseen), jossa ohjelmiston elinkaaren vaiheet suoritetaan lineaarisesti peräkkäin:
+Winston Roycen vuonna 1970 julkaisema artikkeli [Management of the development of Large Software](https://web.archive.org/web/20230326053749/http://www-scf.usc.edu/~csci201/lectures/Lecture11/royce1970.pdf)) pohdiskelee isojen ohjelmistojen kehittämiseen liittyvää problematiikkaa. Artikkelin sivulla 2 Royce esittelee yksinkertaisen _prosessimallin_ (eli ohjeiston työvaiheiden jaksottamiseen), jossa ohjelmiston elinkaaren vaiheet suoritetaan lineaarisesti peräkkäin:
 
 ![](https://raw.githubusercontent.com/mluukkai/ohjelmistotekniikka-kevat2019/main/web/images/l-1.png)
 
